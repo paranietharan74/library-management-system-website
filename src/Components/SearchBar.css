@@ -1,0 +1,30 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input[type="text"],
+.search-bar button {
+    height: 40px; /* Set the height of both input and button */
+    margin: 5px; /* Add some margin between input and button */
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; /* Adjust width as needed */
+}
+
+.search-bar button {
+    background-color: #007bff; /* Blue color, change as needed */
+    color: #fff; /* White color for text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}

@@ -1,0 +1,36 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.article-tag-page-container {
+    background-image: url('../reseources/book-wall-1151405_1920.jpg');
+    height: 100vh;
+    width: 100%;
+}
+
+.search-bar {
+    margin: 15% 0% 0% 0%;
+}
+
+.article-tags-container {
+    margin-left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 60%;
+}
+
+.tag {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}

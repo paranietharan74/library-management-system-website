@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 10px 10px 10px 10px;
+  margin: 10px 0px 10 40%;
+  width: 50%;
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+}
+
+.message-container p {
+  margin-left: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.message-container p {
+  margin-left: 10px;
+}

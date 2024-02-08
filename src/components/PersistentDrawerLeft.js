@@ -156,7 +156,9 @@ export default function PersistentDrawerLeft({ children }) {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <LocalPostOfficeIcon />
-                            <ListItemText primary={'Messages'} />
+                            <Link to="/message" style={{ textDecoration: 'none', color: 'black' }}>
+                                <ListItemText primary={'Messages'} />
+                            </Link>
                         </ListItemButton>
                     </ListItem>
                 </List>

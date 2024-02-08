@@ -26,6 +26,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ReportIcon from '@mui/icons-material/Report';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -130,14 +131,18 @@ export default function PersistentDrawerLeft({ children }) {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <HomeIcon />
-                            <ListItemText primary={'Home'} />
+                            <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+                                <ListItemText primary={'Home'} />
+                            </Link>
                         </ListItemButton>
                     </ListItem>
 
                     <ListItem disablePadding>
                         <ListItemButton>
                             <AttachMoneyIcon />
-                            <ListItemText primary={'Fine Management'} />
+                            <Link to="/fine" style={{ textDecoration: 'none', color: 'black' }}>
+                                <ListItemText primary={'Fine Management'} />
+                            </Link>
                         </ListItemButton>
                     </ListItem>
 

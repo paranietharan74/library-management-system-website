@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../Components/Footer';
-import backgroundImage from '../Pages/reseources/pexels-cottonbro-studio-4855428.jpg'; // Import the image
+import backgroundImage from '../Pages/resources/pexels-cottonbro-studio-4855428.jpg'; // Import the image
 import ArticleNavBar from '../Components/ArticleNavBar';
 
 const AboutPage = () => {

@@ -1,4 +1,5 @@
 import PersistentDrawerLeft from "../components/PersistentDrawerLeft";
+import "./style/userHomeStyle.css";
 
 function UserHome() {
     return (

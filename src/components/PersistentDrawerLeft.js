@@ -128,30 +128,32 @@ export default function PersistentDrawerLeft({ children }) {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <HomeIcon />
-                            <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                                <HomeIcon />
                                 <ListItemText primary={'Home'} />
-                            </Link>
-                        </ListItemButton>
-                    </ListItem>
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
 
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <AttachMoneyIcon />
-                            <Link to="/fine" style={{ textDecoration: 'none', color: 'black' }}>
+                    <Link to="/fine" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                                <AttachMoneyIcon />
                                 <ListItemText primary={'Fine Management'} />
-                            </Link>
-                        </ListItemButton>
-                    </ListItem>
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
 
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <MenuBookIcon />
-                            <ListItemText primary={'My Books'} />
-                        </ListItemButton>
-                    </ListItem>
+                    <Link to="/mybooks" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                                <MenuBookIcon />
+                                <ListItemText primary={'My Books'} />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
 
                     <ListItem disablePadding>
                         <ListItemButton>
@@ -197,6 +199,6 @@ export default function PersistentDrawerLeft({ children }) {
                 <DrawerHeader />
                 {children}
             </Main>
-        </Box>
+        </Box >
     );
 }

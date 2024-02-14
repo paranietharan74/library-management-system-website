@@ -79,15 +79,11 @@
 
 .login-form-submit-button {
     width: 300px;
-    /* Set the button width */
     padding: 10px;
-    /* Add padding */
     background-color: #007bff;
     color: #fff;
-    /* Button text color */
     border: none;
     cursor: pointer;
-    /* Add cursor pointer */
 }
 
 .forgot-password {
@@ -96,15 +92,15 @@
 }
 
 .eye-icon-button {
-    background-color: transparent; /* Remove the background color */
-    border: none; /* Remove the button border */
-    cursor: pointer; /* Add cursor pointer */
-    padding: 0; /* Remove button padding */
+    background-color: transparent;
+    border: none; 
+    cursor: pointer;
+    padding: 0; 
     padding: 5px;
 }
 
 .join-now a,
 .forgot-password a {
-    text-decoration: none; /* Remove underline */
-    color: darkblue; /* Change color to dark blue */
+    text-decoration: none;
+    color: darkblue;
 }

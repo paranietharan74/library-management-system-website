@@ -1,14 +1,35 @@
-.notification-container{
+.book-frame-item {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
-.notifications{
-    margin-left: 40%;
+.book-frame {
+    /*flex: 1 1 200px;*/ /* Flex item grows to fill available space */
     padding: 20px;
-    margin-left: 10vw;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.book-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.book-info {
+    margin-bottom: 5px;
+}
+
+.availability-status {
+    margin-bottom: 10px;
+}
+
+.userHome{
+    background: url('../../resources/libraryHomeBackground.jpg') no-repeat center center fixed;
+}
+
+.home{
+    background-color: #e6e6e6;
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 import Login from './Pages/login';
 import DetailsFilling from './Pages/DetailsFilling';
 import DetailsConfirmation from './Pages/DetailsConfirmation';
+import VerifyEmail from './Pages/VerifyEmail';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path='/details-fill' element={<DetailsFilling />} />
           <Route path='/details-confirmation' element={<DetailsConfirmation />} />
+          <Route path='/verify-email' element={<VerifyEmail />} />
         </Routes>
       </Router>
     </div>

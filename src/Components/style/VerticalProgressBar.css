@@ -1,0 +1,47 @@
+.vertical-progress-container {
+    position: relative;
+    width: 200px;
+    /* Adjust as needed */
+    height: 300px;
+    /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.vertical-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    /* Blue color for the progress bar */
+    width: 6px;
+    /* Adjust as needed */
+    transition: height 0.3s ease;
+}
+
+.activity-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.activity-marker {
+    width: 100%;
+    padding: 10px;
+    color: #555;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.activity-marker.completed {
+    background-color: #4caf50;
+}

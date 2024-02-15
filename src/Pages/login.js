@@ -18,7 +18,7 @@ function Login() {
     return (
         <div className='login-container'>
             <div className='join-now'>
-                <p>Not a member yet?  <Link to='/signup'>Join Now</Link></p>
+                <p>Not a member yet?  <Link to='/details-fill'>Join Now</Link></p>
             </div>
 
             <div className='container'>

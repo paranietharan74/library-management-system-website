@@ -57,6 +57,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 40vh;
+    padding: 100px;
 }
 
 .form{
@@ -66,6 +68,7 @@
 .login-form input[type='text']{
     width: 300px;
     padding: 10px;
+    margin: 10px;
     margin-bottom: 10px;
     /* Add space between inputs */
 }
@@ -73,6 +76,7 @@
 .login-form input[type='password'] {
     width: 300px;
     padding: 10px;
+    margin: 10px;
     margin-bottom: 10px;
     /* Add space between inputs */
 }
@@ -99,8 +103,17 @@
     padding: 5px;
 }
 
-.join-now a,
+.join-now a{
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .forgot-password a {
     text-decoration: none;
     color: darkblue;
+    padding-right: 200px;
+    margin-left: 130px;
 }

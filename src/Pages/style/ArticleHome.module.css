@@ -1,0 +1,10 @@
+/* ArticleHome.module.css */
+.container {
+  background: #ebebe3;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next line if they don't fit */
+  gap: 20px; /* Add spacing between articles */
+}

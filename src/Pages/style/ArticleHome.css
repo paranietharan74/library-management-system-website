@@ -1,9 +1,0 @@
-.articles {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping to next line if needed */
-    gap: 20px; /* Add spacing between articles */
-    align-items: center;
-    margin-left: 10%;
-    padding: 10px;
-  }
-  

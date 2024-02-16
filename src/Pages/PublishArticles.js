@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style/PublishArticlesStyle.css';
+import styles from './style/PublishArticlesStyle.module.css'; // Import CSS module file
 import ArticleNavBar from '../Components/ArticleNavBar';
 import Footer from '../Components/Footer';
 
@@ -24,16 +24,16 @@ function ArticleForm() {
     };
 
     return (
-        <div className='PublishArticles'>
+        <div className={styles.PublishArticles}> {/* Use the correct class name */}
             <ArticleNavBar />
 
-            <div className="article-form-container">
+            <div className={styles['article-form-container']}> {/* Use the correct class name */}
                 <form onSubmit={handleSubmit}>
-                    <div className='button-container'>
-                        <button type="submit" className='submit-button'>Publish</button>
+                    <div className={styles['button-container']}> {/* Use the correct class name */}
+                        <button type="submit" className={styles['submit-button']}>Publish</button> {/* Use the correct class name */}
                     </div>
 
-                    <div className='input-data-container' style={{backgroundColor: 'rgba(255, 255, 255, 0.4)',}}>
+                    <div className={styles['input-data-container']} style={{backgroundColor: 'rgba(255, 255, 255, 0.4)'}}> {/* Use the correct class name */}
                         <label htmlFor="heading">Title...</label>
                         <input
                             type="text"
@@ -49,7 +49,7 @@ function ArticleForm() {
                             id="image"
                             accept="image/*"
                             onChange={handleImageChange}
-                            className='image-input'
+                            className={styles['image-input']}
                             style={{ width: '20vw' }}
                         />
 
@@ -57,7 +57,7 @@ function ArticleForm() {
                             <img
                                 src={URL.createObjectURL(image)}
                                 alt="Preview"
-                                className="image-preview"
+                                className={styles['image-preview']}
                             />
                         )}
 
@@ -73,7 +73,7 @@ function ArticleForm() {
             </div>
 
             <Footer />
-        </div>
+        </div >
     );
 }
 

@@ -1,0 +1,38 @@
+/* SearchBar.module.css */
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+}
+
+.inputContainer input{
+    width: 20vw;
+    height: 6vh;
+}
+
+.input {
+    height: 40px;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

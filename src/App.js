@@ -10,6 +10,7 @@ function App() {
     <Router>
       <div>
         <Routes>
+          {/* Paranietharan */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/article-home" element={<ArticleHome />} />
           <Route path='/publish-articles' element={<PublishArticles />} />

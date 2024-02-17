@@ -5,6 +5,8 @@ import DetailsFilling from './Pages/DetailsFilling';
 import DetailsConfirmation from './Pages/DetailsConfirmation';
 import VerifyEmail from './Pages/VerifyEmail';
 import VerificationSuccess from './Pages/VerificationSuccess';
+import SearchAccount from './Pages/SearchAccount';
+import ChangeForgotPassword from './Pages/ChangeForgotPassword';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path='/details-confirmation' element={<DetailsConfirmation />} />
           <Route path='/verify-email' element={<VerifyEmail />} />
           <Route path='/verification-success' element={<VerificationSuccess />} />
+          <Route path='/search-account' element={<SearchAccount  />} />
+          <Route path='/change-forgot-password' element={<ChangeForgotPassword />} />
         </Routes>
       </Router>
     </div>

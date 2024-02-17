@@ -1,10 +1,8 @@
-import './style/loginStyle.css';
+import styles from './style/loginStyle.module.css'; // Import CSS module file
 import imgSrc from '../resources/login-background-img.jpg';
 import { Link } from 'react-router-dom';
-import 'font-awesome/css/font-awesome.min.css';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 function Login() {
@@ -16,43 +14,52 @@ function Login() {
     };
 
     return (
-        <div className='login-container'>
-            <div className='join-now'>
-                <p>Not a member yet?  <Link to='/details-fill'>Join Now</Link></p>
+        <div className={styles['login-container']}>
+            <div className={styles['join-now']}>
+                <p>Not a member yet? <Link to='/details-fill'>Join Now</Link></p>
             </div>
 
-            <div className='container'>
-                <div className='login-form'>
-                    <form style={{ fontFamily: 'FontAwesome'}} className='form'>
+            <div className={styles['container']}>
+                <div className={styles['login-form']}>
+                    <form className={styles['form']}>
 
-                        <input type="text" placeholder="&#xf0e0; Example@Email.com" style={{ fontFamily: 'fontAwesome',  width: '100%'}} />
+                        <div className={styles['input-container']}>
+                            <div className={styles['input-wrapper']}>
+                                <input
+                                    type="text"
+                                    placeholder="&#xf0e0; Example@Email.com"
+                                    className={styles['login-input']}
+                                    style={{ fontFamily: 'Arial, FontAwesome' }}
+                                />
+                            </div>
 
-                        <div style={{ display: 'flex',  width: '98%' }}>
-                            <input
-                                style={{ fontFamily: 'fontAwesome' }}
-                                type={showPassword ? 'text' : 'password'}
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder='&#xf023; Password'
-                            />
+                            <div className={styles['input-wrapper']}>
+                                <input
+                                    type={showPassword ? 'text' : 'password'}
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder='&#xf023; Password'
+                                    className={styles['login-input']}
+                                    style={{ fontFamily: 'Arial, FontAwesome' }}
+                                />
 
-                            <button type="button" onClick={togglePasswordVisibility} className='eye-icon-button'>
-                                <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
-                            </button>
+                                <button type="button" onClick={togglePasswordVisibility} className={styles['eye-icon-button']}>
+                                    <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+                                </button>
+                            </div>
                         </div>
-                        <button type='submit' className='login-form-submit-button'>Proceed to my Account</button>
+                        <button type='submit' className={styles['login-form-submit-button']}>Proceed to my Account</button>
                     </form>
+                    <div className={styles['forgot-password']}>
+                        <Link to='/forgot-password'>Having issues with your password</Link>
+                    </div>
                 </div>
-
-                <div className='forgot-password'>
-                    <Link to='/forgot-password'>Having issues with your password</Link>
-                </div>
-            </div >
-
-            <div className="img-container">
-                <img src={imgSrc} alt='background' className='background-img' />
             </div>
-        </div >
+
+            <div className={styles['img-container']}>
+                <img src={imgSrc} alt='background' className={styles['background-img']} />
+            </div>
+        </div>
     )
 }
 

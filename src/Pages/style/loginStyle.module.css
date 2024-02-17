@@ -91,7 +91,6 @@
 }
 
 .forgot-password {
-    margin-top: 20px;
     color: black;
 }
 
@@ -116,4 +115,33 @@
     color: darkblue;
     padding-right: 200px;
     margin-left: 130px;
+}
+
+.password-input {
+    display: flex;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.login-input {
+    width: calc(50% - 20px); /* Adjust width as needed */
+    padding-right: 40px; /* Space for the icon */
+}
+
+.eye-icon-button {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

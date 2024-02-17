@@ -1,10 +1,10 @@
 import VerificationSuccessMessage from '../Components/VerificationSuccessMessage';
-import './style/VerificationSuccess.css';
+import styles from './style/VerificationSuccess.module.css';
 
 function VerificationSuccess() {
   return (
-    <div className="VerificationSuccess">
-      <div className="Verification-Success-container">
+    <div className={styles.VerificationSuccess}>
+      <div className={styles['Verification-Success-container']}>
         <VerificationSuccessMessage />
       </div>
     </div>

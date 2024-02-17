@@ -1,11 +1,11 @@
 import CheckYourEmail from '../Components/CheckYourEmail';
-import './style/VerifyEmail.css';
+import styles from './style/VerifyEmail.module.css';
 import { Link } from 'react-router-dom';
 import VerticalProgressBar from '../Components/VerticalProgressBar';
 import { useState } from 'react';
 
 function VerifyEmail() {
-    // for vertical ststus bar
+    // for vertical status bar
     const [currentStep, setCurrentStep] = useState(3);
 
     const handleNextStep = () => {
@@ -24,29 +24,33 @@ function VerifyEmail() {
 
     return (
         <div>
-            <div className='background-image-container'></div>
+            <div className={styles['background-image-container']}></div>
 
-            <div className="container">
-                <div className='sign-in'>
+            <div className={styles['container']}>
+                <div className={styles['sign-in']}>
                     <p>Already a member?<Link to='/login'>Log in</Link></p>
                 </div>
 
-                <div className='verify-email-container'>
-                    <CheckYourEmail />
-                </div>
 
-                <form className='verify-email-form'>
-                    <div className='form-group'>
-                        <input type='text' id='code' name='code' placeholder='Verification Code' onChange={setVerificationCode}/>
+                <div className={styles['verify-email-contents']}>
+                    <div className={styles['verify-email-container']}>
+                        <CheckYourEmail />
                     </div>
 
-                    <div className='form-group'>
-                        <button type='button' onClick={SubmitCode}>Verify</button>
-                    </div>
-                </form>
+                    <form className={styles['verify-email-form']}>
+                        <div className={styles['form-group']}>
+                            <input type='text' id='code' name='code' placeholder='Verification Code' onChange={setVerificationCode} />
+                        </div>
 
-                <div className='progress-bar'>
-                    <VerticalProgressBar currentStep={currentStep} />
+                        <div className={styles['form-group']}>
+                            <button type='button' onClick={SubmitCode}>Verify</button>
+                        </div>
+                    </form>
+
+                    <div className={styles['progress-bar']}>
+                        <VerticalProgressBar currentStep={currentStep} />
+                    </div>
+
                 </div>
             </div>
         </div>

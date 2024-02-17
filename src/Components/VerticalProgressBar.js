@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './style/VerticalProgressBar.css';
+import styles from './style/VerticalProgressBar.module.css';
 
 const VerticalProgressBar = ({ currentStep }) => {
   const [progress, setProgress] = useState(0);
@@ -16,17 +16,18 @@ const VerticalProgressBar = ({ currentStep }) => {
     setProgress(currentStep * 33.33);
 
     // Update completed steps
-    setCompletedSteps([...completedSteps, currentStep]);
-  }, [currentStep]);
+    setCompletedSteps(prevCompletedSteps => [...prevCompletedSteps, currentStep]);
+  }, [currentStep, completedSteps]); // Include completedSteps in the dependency array
+
 
   return (
-    <div className="vertical-progress-container">
-      <div className="vertical-progress-bar" style={{ height: `${progress}%` }}></div>
-      <div className="activity-markers">
+    <div className={styles["vertical-progress-container"]}>
+      <div className={styles["vertical-progress-bar"]} style={{ height: `${progress}%` }}></div>
+      <div className={styles["activity-markers"]}>
         {activities.map(activity => (
           <div
             key={activity.step}
-            className={`activity-marker ${completedSteps.includes(activity.step) ? 'completed' : ''}`}
+            className={`${styles["activity-marker"]} ${completedSteps.includes(activity.step) ? styles["completed"] : ''}`}
           >
             {activity.label}
           </div>

@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import './style/DetailsFillingStyle.css';
+import styles from './style/DetailsFillingStyle.module.css';
 import VerticalProgressBar from '../Components/VerticalProgressBar';
 import { useState } from 'react';
 
 import 'font-awesome/css/font-awesome.min.css';
 
 function DetailsFilling() {
-    // for vertical ststus bar
-    const [currentStep, setCurrentStep] = useState(0);
+    // for vertical status bar
+    const [currentStep, setCurrentStep] = useState(1);
 
     const handleNextStep = () => {
         setCurrentStep(currentStep + 1);
@@ -59,14 +59,14 @@ function DetailsFilling() {
 
     return (
         <div>
-            <div className='background-image-container'></div>
+            <div className={styles['background-image-container']}></div>
 
-            <div className="container">
-                <div className='sign-in'>
+            <div className={styles.container}>
+                <div className={styles['sign-in']}>
                     <p>Already a member?<Link to='/login'>Log in</Link></p>
                 </div>
 
-                <div className='form'>
+                <div className={styles.form}>
                     <form>
                         <input
                             type='text'
@@ -102,7 +102,7 @@ function DetailsFilling() {
                             onChange={handleChange}
                             required
                         />
-                        <div className='password-requirements'>
+                        <div className={styles['password-requirements']}>
                             <ul>
                                 <li>At least 8 characters: {hasMinLength ? '✓' : '✗'}</li>
                                 <li>At least 1 number: {hasNumber ? '✓' : '✗'}</li>
@@ -119,15 +119,15 @@ function DetailsFilling() {
                             required
                         />
 
-                        <button type='submit' className='next-button'>Next</button>
+                        <button type='submit' className={styles['next-button']}>Next</button>
                     </form>
 
-                    <div className='terms'>
+                    <div className={styles.terms}>
                         <p>By creating an account you agree to our <Link to='/terms'>Terms & Privacy</Link></p>
                     </div>
                 </div>
 
-                <div className='progress-bar'>
+                <div className={styles['progress-bar']}>
                     <VerticalProgressBar currentStep={currentStep} />
                 </div>
             </div>

@@ -1,10 +1,12 @@
-.notification-container {
+/* Notification Container */
+.notificationContainer {
     display: flex;
     justify-content: center;
     /* Center align horizontally */
     background-color: #fbf9fa;
 }
 
+/* Notifications */
 .notifications {
     width: 70%;
     /* Adjust the width of the notifications container */

@@ -5,7 +5,7 @@
    margin: 10px 0px 10 40%;
 }
 
-.search-input{
+.searchInput{
     margin-left: 10px;
     width: 30vh;
     height: 20px;
@@ -17,7 +17,7 @@
     margin-bottom: 10px;
 }
 
-.navbar-container{
+.navbarContainer{
     background-color: #e6e6e6;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;

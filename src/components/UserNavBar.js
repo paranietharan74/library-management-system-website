@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -6,54 +6,49 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-//import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import Logout from '@mui/icons-material/Logout';
-import './style/UserNavBarStyle.css';
-
-// Search icon
 import SearchIcon from '@mui/icons-material/Search';
+import styles from './style/UserNavBarStyle.module.css';
 
 export default function UserNavBar() {
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
     const handleClose = () => {
         setAnchorEl(null);
     };
 
-    const [searchText, setSearchText] = React.useState('');
+    const [searchText, setSearchText] = useState('');
+
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             console.log("Search Text:", searchText);
         }
     };
 
-    const SendSearchText = (event) => {
+    const sendSearchText = (event) => {
         console.log("Search Text:", searchText);
     };
 
     return (
         <React.Fragment>
-            <div className='navbar-container'>
+            <div className={styles.navbarContainer}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', textAlign: 'center' }}>
-                    <div className='search-icon-container'>
-                        {/* Search icon */}
-
+                    <div className={styles.searchIconContainer}>
                         <input
                             type="text"
-                            placeholder="Search for books" // Update the placeholder text here
+                            placeholder="Search for books"
                             value={searchText}
                             onChange={(e) => setSearchText(e.target.value)}
                             onKeyDown={handleKeyDown}
-                            style={{ display: 'inline-block', width: '20vw' }}
-                            className='search-input'
+                            className={styles.searchInput}
                         />
-
-
-                        <IconButton onClick={SendSearchText}>
+                        <IconButton onClick={sendSearchText}>
                             <SearchIcon sx={{ mr: 2 }} />
                         </IconButton>
                     </div>

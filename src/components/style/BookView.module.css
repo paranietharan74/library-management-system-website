@@ -1,37 +1,33 @@
-.BookView {
+.bookView {
     display: flex;
-    max-width: 70%;
-    margin: 20px auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    width: 70vw;
 }
 
-.book-img {
-    flex: 1;
+.bookImg {
+    width: 30%;
     padding: 20px;
     overflow: hidden;
 }
 
-.book-img img {
+.bookImg img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    max-width: 300px;
-    max-height: 400px;
 }
 
-.book-info {
-    flex: 2;
+.bookInfo {
+    flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.borrowed-info {
-    text-align: center;
+.borrowedInfo {
     padding: 20px;
     border-top: 1px solid #ccc;
+    text-align: center;
 }

@@ -1,20 +1,19 @@
 import React from 'react';
-import './style/BookView.css';
+import styles from './style/BookView.module.css'; // Import the CSS module
 
 function BookView({ imgSrc, description, borrowedDate }) {
     return (
-        <div className='BookView'>
-            <div className="book-img">
-                {/* Use the image */}
+        <div className={styles.bookView}>
+            <div className={styles.bookImg}>
                 <img src={imgSrc} alt="Book Cover" />
             </div>
 
-            <div className="book-info">
+            <div className={styles.bookInfo}>
                 <h1>Description</h1>
                 <p>{description}</p>
             </div>
 
-            <div className="borrowed-info">
+            <div className={styles.borrowedInfo}>
                 <p>Borrowed {borrowedDate}</p>
             </div>
         </div>

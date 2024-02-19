@@ -1,22 +1,34 @@
-import React from 'react';
-import styles from './ArticleSummaryStyle.module.css'; // Import the CSS module
-// ^ Note the change in the import statement
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import Button from '@mui/material/Button';
+import CardActions from '@mui/material/CardActions';
 
-function ArticleSummary(props) {
+export default function ActionAreaCard(props) {
   return (
-    <div className={styles['article-summary-wrapper']}> {/* Use the scoped class name */}
-      <div className={styles['article-summary-container']}> {/* Use the scoped class name */}
-        <img className={styles['article-image']} src={props.articleImage} alt="Article" /> {/* Use the scoped class name */}
-        <p className={styles['article-summary']}>{props.summary}</p> {/* Use the scoped class name */}
-        <h2 className={styles['article-title']}>{props.title}</h2> {/* Use the scoped class name */}
-        <div className={styles['author-info']}>
-          <img className={styles['author-image']} src={props.authorImage} alt="Author" /> {/* Use the scoped class name */}
-          <p className={styles['author-name']}>{props.authorName}</p> {/* Use the scoped class name */}
-        </div>
-        <p className={styles['publication-date']}>Published {props.publishedAgo}</p> {/* Use the scoped class name */}
-      </div>
-    </div>
+    <Card sx={{ maxWidth: '20%', margin: '10px', backgroundColor: '#e6e6e6' }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={props.articleImage}
+          alt="green iguana"
+          style={{width: '100%', height: 'auto'}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {props.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">{props.summary}</Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
   );
 }
-
-export default ArticleSummary;

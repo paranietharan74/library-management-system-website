@@ -158,19 +158,21 @@ function ArticleNavBar() {
                     </Box>
 
                     {/* Search Icon */}
-                    <IconButton onClick={handleSearchIconClickVisible}>
-                        <SearchIcon sx={{ mr: 2 }} />
-                    </IconButton>
-                    {isSearchVisible && (
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            value={searchText}
-                            onChange={(e) => setSearchText(e.target.value)}
-                            onKeyDown={handleKeyDown}
-                            style={{ display: 'inline-block', width: '100px' }}
-                        />
-                    )}
+                    <div>
+                        {isSearchVisible && (
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                value={searchText}
+                                onChange={(e) => setSearchText(e.target.value)}
+                                onKeyDown={handleKeyDown}
+                                style={{ display: 'inline-block', width: '200px' }}
+                            />
+                        )}
+                        <IconButton onClick={handleSearchIconClickVisible}>
+                            <SearchIcon sx={{ mr: 2 }} />
+                        </IconButton>
+                    </div>
 
                     {/* Notification Icon */}
                     <NotificationsActiveIcon sx={{ mr: 2 }} onClick={handleNotificationClick} />

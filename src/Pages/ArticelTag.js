@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import ArticleNavBar from "../Components/ArticleNavBar";
 import Footer from "../Components/Footer";
 import SearchBar from '../Components/SearchBar';
-import styles from './style/ArticleTag.module.css'; // Import CSS module file
+import styles from './style/ArticleTag.module.css';
 
 function ArticleTag() {
     const [searchResults, setSearchResults] = useState([]);
 
-    // Function to handle search
+    // Function 2 handle search
     const handleSearch = (searchText) => {
         setSearchResults([searchText]);
         console.log(searchResults);

@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 
-export default function ActionAreaCard(props) {
+export default function ArticleSummary(props) {
   return (
     <Card sx={{ maxWidth: '20%', margin: '10px', backgroundColor: '#e6e6e6' }}>
       <CardActionArea>

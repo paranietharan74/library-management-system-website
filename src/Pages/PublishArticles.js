@@ -58,8 +58,8 @@ function ArticleForm() {
                 maxWidth: '100%',
                 padding: '20px',
                 boxSizing: 'border-box',
-                backgroundSize: 'cover', // Optional: specify background size
-                backgroundPosition: 'center', // Optional: specify background position
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
             }}>
                 <div style={{ maxWidth: '80%', margin: '0 auto' }}>
                     <form onSubmit={handleSubmit}>

@@ -20,7 +20,7 @@ function ArticleTag() {
             <div className={styles.content}>
                 <SearchBar onSearch={handleSearch} className={styles.searchBar} />
 
-                <div className={styles.tagsContainer}>
+                 <div className={styles.tagsContainer}>
                     <div className={styles.tag}>#medical</div>
                     <div className={styles.tag}>#maths</div>
                     <div className={styles.tag}>#science</div>

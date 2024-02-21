@@ -4,6 +4,7 @@ import AboutPage from './Pages/About';
 import ArticleHome from './Pages/ArticleHome';
 import PublishArticles from './Pages/PublishArticles';
 import ArticleTag from './Pages/ArticelTag';
+import ViewArticle from './Pages/ViewArticle';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/article-home" element={<ArticleHome />} />
           <Route path='/publish-articles' element={<PublishArticles />} />
           <Route path='/article-tag' element={<ArticleTag />} />
+          <Route path='/article-view' element={<ViewArticle />} />
         </Routes>
       </div>
     </Router>

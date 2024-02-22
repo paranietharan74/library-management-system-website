@@ -5,6 +5,7 @@ import ArticleHome from './Pages/ArticleHome';
 import PublishArticles from './Pages/PublishArticles';
 import ArticleTag from './Pages/ArticelTag';
 import ViewArticle from './Pages/ViewArticle';
+import MyProfile from './Pages/MyProfile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/publish-articles' element={<PublishArticles />} />
           <Route path='/article-tag' element={<ArticleTag />} />
           <Route path='/article-view' element={<ViewArticle />} />
+          <Route path='/my-profile' element={<MyProfile />} />
         </Routes>
       </div>
     </Router>

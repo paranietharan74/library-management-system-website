@@ -7,6 +7,7 @@ import VerifyEmail from './Pages/VerifyEmail';
 import VerificationSuccess from './Pages/VerificationSuccess';
 import SearchAccount from './Pages/SearchAccount';
 import ChangeForgotPassword from './Pages/ChangeForgotPassword';
+import VerifyForgotPassword from './Pages/VerifyForgotPassword';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/verification-success' element={<VerificationSuccess />} />
           <Route path='/search-account' element={<SearchAccount  />} />
           <Route path='/change-forgot-password' element={<ChangeForgotPassword />} />
+          <Route path='/verifyMailForgotPassword' element={<VerifyForgotPassword />} />
         </Routes>
       </Router>
     </div>

@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 
 function ViewArticle() {
     return (
-        <div >
+        <div>
             <ArticleNavBar />
             <div className={styles.content}>
                 <img

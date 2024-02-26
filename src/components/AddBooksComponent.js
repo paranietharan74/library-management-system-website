@@ -64,13 +64,14 @@ function AddBooksComponent({ onAdd }) {
         <div className={styles.addBooksComponent}>
             <div className={styles.addBooksForm}>
                 <form className={styles.form} onSubmit={handleSubmit}>
-                    <input
+                    {/* <input
                         type="text"
                         placeholder="Book Name"
                         value={bookName}
                         onChange={(e) => setBookName(e.target.value)}
                         className={errors.bookName && styles.errorInput}
-                    />
+                    /> */}
+                    
                     {errors.bookName && <p className={styles.errorMsg}>{errors.bookName}</p>}
                     <input
                         type="text"

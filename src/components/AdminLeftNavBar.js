@@ -21,7 +21,7 @@ const AdminLeftNavBar = () => {
                         <Link to="/" className={`${styles.sidebarLink} ${styles.activeLink}`}>
                             <span className={styles.sidebarLinkName}>Home</span>
                         </Link>
-                        <Link to="/" className={`${styles.sidebarLink} ${styles.activeLink}`}>
+                        <Link to="/admin-book-management" className={`${styles.sidebarLink} ${styles.activeLink}`}>
                             <span className={styles.sidebarLinkName}>Book Management</span>
                         </Link>
                         <Link to="/" className={`${styles.sidebarLink} ${styles.activeLink}`}>

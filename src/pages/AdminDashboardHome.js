@@ -26,6 +26,13 @@ function AdminDashboardHome() {
               bookName="Fire of wings"
               fineAmount="1000"
             />
+
+            <SingleSearchResult
+              profileImage={exampleImage}
+              name="Paranie"
+              bookName="Fire of wings"
+              fineAmount="1000"
+            />
           </div>
         </div>
 

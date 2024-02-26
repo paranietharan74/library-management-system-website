@@ -1,0 +1,33 @@
+.bookManagementPage{
+    background-color: #e6e6e6;
+    min-height: 100vh;
+}
+
+.content {
+    height: 100%;
+}
+
+.addBooks,
+.editBooks,
+.deleteBooks{
+    margin: 10px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #6666ff;
+}
+
+
+.addBooks:hover,
+.editBooks:hover,
+.deleteBooks:hover {
+    background-color: #5555cc;
+}
+
+.displayComponent{
+    margin-top: 7vh;
+    margin-left: 10vw;
+}

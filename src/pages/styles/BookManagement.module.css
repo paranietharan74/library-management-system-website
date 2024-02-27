@@ -7,6 +7,10 @@
     height: 100%;
 }
 
+.menuItems{
+    margin-top: 10vh;
+}
+
 .addBooks,
 .editBooks,
 .deleteBooks{

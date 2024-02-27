@@ -13,7 +13,7 @@ export default function LibrarianTopNavBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{ backgroundColor: 'linear-gradient(to right, #1a33ad, #8184fe)' }} style={{width: '98vw', marginLeft: '1vw', borderRadius: '10px'}}>
+            <AppBar position="static" sx={{ backgroundColor: 'linear-gradient(to right, #1a33ad, #8184fe)' }} style={{borderRadius: '10px'}}>
                 <Toolbar>
                     <Typography
                         variant="h6"

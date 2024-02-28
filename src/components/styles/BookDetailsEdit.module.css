@@ -60,9 +60,9 @@
 
 
 .column {
-    padding-top: 20px;
+    padding-top: 2px;
 }
 
 .column> p {
-    padding: 20px 0px;
+    padding: 2px 0px;
 }

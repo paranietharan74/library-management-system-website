@@ -1,6 +1,27 @@
 .contents{
-    background-color: red;
+    background: url('../../resources/bookImage.jpg');
     width: 78vw;
+    height: 70vh;
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-top: 10vh;
     margin-left: 20vw;
+}
+
+.addbutton{
+    padding: 10px;
+    margin: 10px;
+    width: 7vw;
+    height: auto;
+    border-color: #808080;
+    border-radius: 10px;
+}
+
+.removebutton{
+    padding: 10px;
+    margin: 10px;
+    width: 7vw;
+    height: auto;
+    border-color: #808080;
     border-radius: 10px;
 }

@@ -10,7 +10,7 @@ const AboutPage = () => {
             <div style={{ ...pageStyle, backgroundImage: `url(${backgroundImage})` }}>
                 <div>
                     <div style={textContentStyle}>
-                        <h2>Welcome to our Library Management System!</h2>
+                        <h2 style={Heading}>Welcome to our Library Management System!</h2>
                         <p>Library management is a multifaceted process that encompasses various aspects of organizing, maintaining, and providing access to library resources. It involves the efficient handling of books, journals, multimedia materials, and other resources to meet the diverse needs of library users. From acquisitions to cataloging, circulation, and user services, library management aims to streamline operations and enhance the overall user experience.</p>
 
                         <p>One crucial aspect of library management is acquisitions, which involves selecting, acquiring, and processing new materials to add to the library's collection. Librarians carefully evaluate resources based on relevance, quality, and user demand to ensure that the collection remains current and comprehensive.</p>
@@ -60,7 +60,14 @@ const pageStyle = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     alignItems: 'center',
+    fontFamily: 'ArialAbhaya Libre, serif',
+    fontSize: '20px',
 };
+
+const Heading = {
+    fontSize: '40px',
+    color: 'black',
+};``
 
 const textContentStyle = {
     padding: '20px',

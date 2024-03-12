@@ -1,7 +1,7 @@
 import React from 'react';
 import PageMessage from "../components/PageMessage";
 import PersistentDrawerLeft from "../components/PersistentDrawerLeft";
-import styles from '../Pages/style/UserMessagesStyle.module.css'; // Import the CSS module
+import styles from './style/UserMessagesStyle.module.css'; // Import the CSS module
 
 function UserMessages() {
   const messageStyle = {

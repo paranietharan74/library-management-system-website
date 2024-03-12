@@ -77,14 +77,14 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 export default function PersistentDrawerLeft({ children }) {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
 
     const handleDrawerOpen = () => {
         setOpen(true);
     };
 
     const handleDrawerClose = () => {
-        setOpen(false);
+        setOpen(true);
     };
 
     return (
@@ -92,7 +92,7 @@ export default function PersistentDrawerLeft({ children }) {
             <CssBaseline />
             <AppBar position="fixed" open={open} style={{ background: '#f2f2f2' }}>
                 <Toolbar>
-                    <IconButton
+                    {/* <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         onClick={handleDrawerOpen}
@@ -101,7 +101,7 @@ export default function PersistentDrawerLeft({ children }) {
                         style={{ color: 'black' }}
                     >
                         <MenuIcon />
-                    </IconButton>
+                    </IconButton> */}
                     <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
                         {/* Implement Top Navigation bar here */}
                         <UserNavBar />
@@ -122,9 +122,9 @@ export default function PersistentDrawerLeft({ children }) {
                 open={open}
             >
                 <DrawerHeader>
-                    <IconButton onClick={handleDrawerClose}>
+                    {/* <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                    </IconButton>
+                    </IconButton> */}
                 </DrawerHeader>
                 <Divider />
                 <List>
@@ -166,12 +166,15 @@ export default function PersistentDrawerLeft({ children }) {
                 </List>
                 <Divider />
                 <List>
+                <Link to="/profile" style={{ textDecoration: 'none', color: 'black' }}>
                     <ListItem disablePadding>
                         <ListItemButton>
                             <AccountCircleIcon />
-                            <ListItemText primary={'Profile'} />
+                                <ListItemText primary={'Profile'} />
                         </ListItemButton>
                     </ListItem>
+                    </Link>
+
 
                     <ListItem disablePadding>
                         <ListItemButton>

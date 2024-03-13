@@ -1,24 +1,34 @@
 import imgSrc from '../resources/login-background-img.jpg';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import styles from './style/ChangeForgotPassword.module.css';
 
-function ChnageForgotPassword() {
+function ChangeForgotPassword() {
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
 
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
+
+    const handleConfirmPasswordChange = (e) => {
+        setConfirmPassword(e.target.value);
+    };
+
+    // Password validation logic
+    const hasMinLength = password.length >= 8;
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(password);
+    const passwordMatch = password === confirmPassword;
+
     return (
         <div className={styles['login-container']}>
-            <div className={styles['join-now']}>
-                <p>Not a member yet? <Link to='/details-fill'>Join Now</Link></p>
-            </div>
-
             <div className={styles['container']}>
                 <div className={styles['login-form']}>
                     <form className={styles['form']}>
@@ -27,7 +37,7 @@ function ChnageForgotPassword() {
                                 <input
                                     type={showPassword ? 'text' : 'password'}
                                     value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    onChange={handlePasswordChange}
                                     placeholder='&#xf023; Password'
                                     className={styles['login-input']}
                                     style={{ fontFamily: 'Arial, FontAwesome' }}
@@ -41,15 +51,23 @@ function ChnageForgotPassword() {
                             <div className={styles['input-wrapper']}>
                                 <input
                                     type={showPassword ? 'text' : 'password'}
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    value={confirmPassword}
+                                    onChange={handleConfirmPasswordChange}
                                     placeholder='&#xf023; Confirm Password'
                                     className={styles['login-input']}
                                     style={{ fontFamily: 'Arial, FontAwesome' }}
                                 />
                             </div>
                         </div>
-                        <button type='submit' className={styles['login-form-submit-button']}>Change Password {<i class="fa fa-chevron-circle-right" aria-hidden="true" style={{ marginLeft: '10px', fontSize: '20px' }}></i>}</button>
+                        <div className={styles['password-requirements']}>
+                            <ul>
+                                <li>At least 8 characters: {hasMinLength ? '✓' : '✗'}</li>
+                                <li>At least 1 number: {hasNumber ? '✓' : '✗'}</li>
+                                <li>At least 1 special character: {hasSpecialChar ? '✓' : '✗'}</li>
+                                <li>Passwords match: {passwordMatch ? '✓' : '✗'}</li>
+                            </ul>
+                        </div>
+                        <button type='submit' className={styles['login-form-submit-button']}>Change Password {<i className="fa fa-chevron-circle-right" aria-hidden="true" style={{ marginLeft: '10px', fontSize: '20px' }}></i>}</button>
                     </form>
                 </div>
             </div>
@@ -61,4 +79,4 @@ function ChnageForgotPassword() {
     );
 }
 
-export default ChnageForgotPassword;
+export default ChangeForgotPassword;

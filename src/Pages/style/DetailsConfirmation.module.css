@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 .background-image-container {
     width: 100%;
     height: 100%;
@@ -50,6 +52,7 @@
     position: relative;
     margin-left: 20vw;
 }
+
 /* 
 .confirmation-details {
     margin-top: 15vh;
@@ -98,28 +101,40 @@
     font-size: 16px;
     color: #333;
     margin: 5px 0;
-    text-align: center; /* Align text in center */
+    text-align: center;
+    /* Align text in center */
 }
 
 .first-name input,
 .last-name input {
     font-weight: bold;
-    text-align: center; /* Align input text in center */
+    text-align: center;
+    /* Align input text in center */
 }
 
 .dob input {
     font-style: italic;
-    text-align: center; /* Align input text in center */
+    text-align: center;
+    /* Align input text in center */
+}
+
+.confirmation-details input {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .class-details {
     color: #007bff;
-    text-align: center; /* Align text in center */
+    text-align: center;
+    /* Align text in center */
 }
 
 .confirm-details-next-button {
-    margin-top: 20px; /* Add margin for button */
-    align-self: center; /* Align button in center */
+    margin-top: 20px;
+    /* Add margin for button */
+    align-self: center;
+    /* Align button in center */
     background-color: #007bff;
     color: white;
     padding: 10px 20px;

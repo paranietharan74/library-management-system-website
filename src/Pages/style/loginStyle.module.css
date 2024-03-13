@@ -27,11 +27,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-    /* Center the content horizontally */
     align-items: center;
-    /* Center the content vertically */
     height: 100vh;
-    /* Ensure the container covers the entire viewport height */
 }
 
 .container {
@@ -70,7 +67,6 @@
     padding: 10px;
     margin: 10px;
     margin-bottom: 10px;
-    /* Add space between inputs */
 }
 
 .login-form input[type='password'] {
@@ -78,7 +74,6 @@
     padding: 10px;
     margin: 10px;
     margin-bottom: 10px;
-    /* Add space between inputs */
 }
 
 .login-form-submit-button {
@@ -123,7 +118,6 @@
 }
 
 .input-container {
-    display: flex;
     justify-content: space-between;
 }
 
@@ -132,13 +126,13 @@
 }
 
 .login-input {
-    width: calc(50% - 20px); /* Adjust width as needed */
-    padding-right: 40px; /* Space for the icon */
+    width: calc(50% - 20px);
+    padding-right: 40px;
 }
 
 .eye-icon-button {
     position: absolute;
-    right: 10px; /* Adjust as needed */
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;

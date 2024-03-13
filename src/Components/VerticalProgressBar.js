@@ -13,10 +13,10 @@ const VerticalProgressBar = ({ currentStep }) => {
 
   useEffect(() => {
     // Calculate progress based on the current step
-    setProgress(currentStep * 33.33);
+    setProgress(currentStep * 50);
 
-    // Update completed steps
-    setCompletedSteps(prevCompletedSteps => [...prevCompletedSteps, currentStep]);
+    const updatedCompletedSteps = activities.filter(activity => activity.step <= currentStep).map(activity => activity.step);
+    setCompletedSteps(updatedCompletedSteps);
   }, [currentStep, completedSteps]); // Include completedSteps in the dependency array
 
 

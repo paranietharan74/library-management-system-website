@@ -67,7 +67,7 @@ const pageStyle = {
 const Heading = {
     fontSize: '40px',
     color: 'black',
-};``
+};
 
 const textContentStyle = {
     padding: '20px',

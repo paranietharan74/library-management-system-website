@@ -3,6 +3,7 @@ import styles from './style/VerifyEmail.module.css';
 import { Link } from 'react-router-dom';
 import VerticalProgressBar from '../Components/VerticalProgressBar';
 import { useState } from 'react';
+import OtpInput from '../Components/OtpInput';
 
 function VerifyEmail() {
     // for vertical status bar
@@ -39,7 +40,7 @@ function VerifyEmail() {
 
                     <form className={styles['verify-email-form']}>
                         <div className={styles['form-group']}>
-                            <input type='text' id='code' name='code' placeholder='Verification Code' onChange={setVerificationCode} />
+                            <OtpInput />
                         </div>
 
                         <div className={styles['form-group']}>

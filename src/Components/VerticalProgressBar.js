@@ -13,7 +13,11 @@ const VerticalProgressBar = ({ currentStep }) => {
 
   useEffect(() => {
     // Calculate progress based on the current step
-    setProgress(currentStep * 50);
+    if(currentStep < 3) {
+      setProgress(currentStep * 50);
+    }else{
+      setProgress(100);
+    }
 
     const updatedCompletedSteps = activities.filter(activity => activity.step <= currentStep).map(activity => activity.step);
     setCompletedSteps(updatedCompletedSteps);

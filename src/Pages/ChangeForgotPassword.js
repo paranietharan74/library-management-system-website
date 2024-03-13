@@ -61,10 +61,10 @@ function ChangeForgotPassword() {
                         </div>
                         <div className={styles['password-requirements']}>
                             <ul>
-                                <li>At least 8 characters: {hasMinLength ? '✓' : '✗'}</li>
-                                <li>At least 1 number: {hasNumber ? '✓' : '✗'}</li>
-                                <li>At least 1 special character: {hasSpecialChar ? '✓' : '✗'}</li>
-                                <li>Passwords match: {passwordMatch ? '✓' : '✗'}</li>
+                                <li>At least 8 characters: <span className={hasMinLength ? styles['password-requirements-right-symbol'] : styles['password-requirements-wrong-symbol']}>{hasMinLength ? '✓' : '✗'}</span></li>
+                                <li>At least 1 number: <span className={hasNumber ? styles['password-requirements-right-symbol'] : styles['password-requirements-wrong-symbol']}>{hasNumber ? '✓' : '✗'}</span></li>
+                                <li>At least 1 special character: <span className={hasSpecialChar ? styles['password-requirements-right-symbol'] : styles['password-requirements-wrong-symbol']}>{hasSpecialChar ? '✓' : '✗'}</span></li>
+                                <li>Passwords match: <span className={passwordMatch ? styles['password-requirements-right-symbol'] : styles['password-requirements-wrong-symbol']}>{passwordMatch ? '✓' : '✗'}</span></li>
                             </ul>
                         </div>
                         <button type='submit' className={styles['login-form-submit-button']}>Change Password {<i className="fa fa-chevron-circle-right" aria-hidden="true" style={{ marginLeft: '10px', fontSize: '20px' }}></i>}</button>

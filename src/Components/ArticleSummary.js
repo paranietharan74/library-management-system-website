@@ -27,7 +27,7 @@ export default function ArticleSummary(props) {
       </CardActionArea>
       <CardActions>
         <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Read Article</Button>
       </CardActions>
     </Card>
   );

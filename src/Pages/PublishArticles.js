@@ -75,6 +75,17 @@ function ArticleForm() {
                         </div>
 
                         <div style={{ marginBottom: '20px' }}>
+                            <input
+                                type="text"
+                                value={heading}
+                                onChange={(e) => setHeading(e.target.value)}
+                                placeholder="#Tags"
+                                style={{ width: '100%', padding: '10px', marginBottom: '15px', border: '1px solid #ccc', borderRadius: '5px', boxSizing: 'border-box', fontSize: '1.2rem' }}
+                                className="title-input"
+                            />
+                        </div>
+
+                        <div style={{ marginBottom: '20px' }}>
                             <label htmlFor="image" style={{ display: 'block', marginBottom: '5px', fontSize: '1.2rem', fontWeight: 'bold' }}>Image:</label>
                             <input
                                 type="file"

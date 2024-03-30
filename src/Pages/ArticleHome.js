@@ -62,9 +62,8 @@ function ArticleHome() {
                         publishedAgo="2 hours ago"
                     />
                 </div>
-
-                <Footer />
             </div >
+            <Footer />
         </div>
     );
 }

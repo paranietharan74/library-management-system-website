@@ -17,8 +17,9 @@ function App() {
           <Route path="/article-home" element={<ArticleHome />} />
           <Route path='/publish-articles' element={<PublishArticles />} />
           <Route path='/article-tag' element={<ArticleTag />} />
-          <Route path='/article-view' element={<ViewArticle />} />
           <Route path='/my-profile' element={<MyProfile />} />
+
+          <Route path='/article-view' element={<ViewArticle />} />
         </Routes>
       </div>
     </Router>

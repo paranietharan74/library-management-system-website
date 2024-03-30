@@ -18,13 +18,13 @@ import { Link } from 'react-router-dom';
 // Search icon
 import SearchIcon from '@mui/icons-material/Search';
 // Notification icon
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+// import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 const pages = ['Tags', 'Home', 'About'];
 const links = ['article-tag', 'article-home', 'about'];
 
-const settings = ['Profile', 'Library book', 'About', 'Logout'];
-const settingslinks = ['article-Profile', 'home', 'about', 'logout'];
+const settings = ['Profile', 'Library book', 'About','Publish Articles', 'Logout'];
+const settingslinks = ['my-profile', 'home', 'about','publish-articles', 'logout'];
 
 function ArticleNavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -45,11 +45,11 @@ function ArticleNavBar() {
         setAnchorElUser(null);
     };
 
-    const [showNotifications, setShowNotifications] = React.useState(false);
+    // const [showNotifications, setShowNotifications] = React.useState(false);
 
-    const handleNotificationClick = () => {
-        setShowNotifications(!showNotifications);
-    };
+    // const handleNotificationClick = () => {
+    //     setShowNotifications(!showNotifications);
+    // };
 
     const [searchText, setSearchText] = React.useState('');
     const [isSearchVisible, setIsSearchVisible] = React.useState(false);
@@ -174,9 +174,9 @@ function ArticleNavBar() {
                         </IconButton>
                     </div>
 
-                    {/* Notification Icon */}
+                    {/* Notification Icon
                     <NotificationsActiveIcon sx={{ mr: 2 }} onClick={handleNotificationClick} />
-                    {showNotifications && <NotificationList />}
+                    {showNotifications && <NotificationList />} */}
 
                     {/* Profile Icon */}
                     <Box sx={{ flexGrow: 0 }}>
@@ -217,34 +217,34 @@ function ArticleNavBar() {
     );
 }
 
-const NotificationList = () => {
-    // Generate sample notifications
-    const notifications = Array.from({ length: 10 }, (_, i) => `Notification ${i + 1}`);
+// const NotificationList = () => {
+//     // Generate sample notifications
+//     const notifications = Array.from({ length: 10 }, (_, i) => `Notification ${i + 1}`);
 
-    return (
-        <div style={notificationListStyle}>
-            {notifications.map((notification, index) => (
-                <div key={index} style={notificationStyle}>{notification}</div>
-            ))}
-        </div>
-    );
-};
+//     return (
+//         <div style={notificationListStyle}>
+//             {notifications.map((notification, index) => (
+//                 <div key={index} style={notificationStyle}>{notification}</div>
+//             ))}
+//         </div>
+//     );
+// };
 
 // Styles
-const notificationListStyle = {
-    position: 'absolute',
-    top: '50px', // Adjust as needed
-    right: '10px',
-    backgroundColor: 'white',
-    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-    maxHeight: '200px',
-    overflowY: 'auto',
-};
+// const notificationListStyle = {
+//     position: 'absolute',
+//     top: '50px', // Adjust as needed
+//     right: '10px',
+//     backgroundColor: 'white',
+//     boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+//     maxHeight: '200px',
+//     overflowY: 'auto',
+// };
 
-const notificationStyle = {
-    padding: '10px',
-    borderBottom: '1px solid #ccc',
-    color: 'black',
-};
+// const notificationStyle = {
+//     padding: '10px',
+//     borderBottom: '1px solid #ccc',
+//     color: 'black',
+// };
 
 export default ArticleNavBar;

@@ -1,68 +1,21 @@
+// ArticleHome.js
+import React from 'react';
 import ArticleNavBar from "../Components/ArticleNavBar";
 import Footer from "../Components/Footer";
 import ArticleSummary from "../Components/ArticleSummary";
-import styles from './style/ArticleHome.module.css'; // Import CSS module file
+import styles from './style/ArticleHome.module.css';
 
-function ArticleHome() {
+function ArticleHome({ articles }) {
     return (
         <div>
             <ArticleNavBar />
             <div className={styles.container}>
-
                 <div className={styles.articles}>
-
-                    <ArticleSummary
-                        articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-                        title="Sample Article Title"
-                    />
-
-
-
-                    <ArticleSummary
-                        articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-                        title="Sample Article Title"
-                    />
-
-
-                    <ArticleSummary
-                        articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-                        authorImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        title="Sample Article Title"
-                        authorName="John Doe"
-                        publishedAgo="2 hours ago"
-                    />
-
-                    <ArticleSummary
-                        articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-                        authorImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        title="Sample Article Title"
-                        authorName="John Doe"
-                        publishedAgo="2 hours ago"
-                    />
-
-                    <ArticleSummary
-                        articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-                        authorImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        title="Sample Article Title"
-                        authorName="John Doe"
-                        publishedAgo="2 hours ago"
-                    />
-
-                    <ArticleSummary
-                        articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-                        authorImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        title="Sample Article Title"
-                        authorName="John Doe"
-                        publishedAgo="2 hours ago"
-                    />
+                    {articles.map(article => (
+                        <ArticleSummary key={article.id} article={article} />
+                    ))}
                 </div>
-            </div >
+            </div>
             <Footer />
         </div>
     );

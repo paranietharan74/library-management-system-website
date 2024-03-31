@@ -12,10 +12,11 @@
   justify-content: center;
 }
 
-.card {
+/* .card {
   width: calc(33.33% - 20px);
+  height: 10vh;
   margin: 10px;
-}
+} */
 
 @media (max-width: 768px) {
   .card {

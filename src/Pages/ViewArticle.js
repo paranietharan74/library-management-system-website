@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import styles from './style/ViewArticle.module.css';
 import HoverRating from '../Components/HoverRating';
 import ViewComments from '../Components/ViewComments';
-import ArticleNavBar from '../Components/ArticleNavBar';
+import ArticleBreadCrumbs from '../Components/ArticleBreadCrumbs';
 import Footer from '../Components/Footer';
 
 function ViewArticle({ articles }) {
@@ -36,9 +36,9 @@ function ViewArticle({ articles }) {
 
     return (
         <>
-            <nav style={{ backgroundColor: 'blue' }}>
-                <ArticleNavBar />
-            </nav>
+            <div className={styles.navbar}>
+                <ArticleBreadCrumbs className={styles.breadCrumbs} />
+            </div>
             <div className={styles.ViewArticle}>
                 <div className={styles.content}>
                     <img
@@ -83,7 +83,9 @@ function ViewArticle({ articles }) {
                             <textarea placeholder="Write a comment"></textarea>
                             <button>Submit</button>
                         </div>
-                        <ViewComments comments={comments} />
+                        <div className={styles.viewComments}>
+                            <ViewComments comments={comments} />
+                        </div>
                     </div>
                 </div>
             </div>

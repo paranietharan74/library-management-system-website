@@ -11,7 +11,7 @@ import CardActions from '@mui/material/CardActions';
 
 function ArticleSummary({ article }) {
   return (
-    <Card sx={{ maxWidth: '100%', margin: '10px', backgroundColor: '#e6e6e6' }}>
+    <Card sx={{ maxWidth: '25%', maxHeight: '400px', margin: '10px', backgroundColor: '#e6e6e6' }}>
       <Link to={`/article/${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
         <CardActionArea>
           <CardMedia
@@ -19,7 +19,7 @@ function ArticleSummary({ article }) {
             height="140"
             image={article.articleImage}
             alt="Article Image"
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '25vw', maxHeight: '250px', height: 'auto' }}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">

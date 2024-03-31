@@ -12,7 +12,7 @@ function ArticleHome({ articles }) {
             <div className={styles.container}>
                 <div className={styles.articles}>
                     {articles.map(article => (
-                        <ArticleSummary key={article.id} article={article} />
+                        <ArticleSummary key={article.id} article={article}/>
                     ))}
                 </div>
             </div>

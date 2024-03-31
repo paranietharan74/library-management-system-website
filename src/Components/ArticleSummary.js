@@ -10,6 +10,10 @@ import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 
 function ArticleSummary({ article }) {
+  const title = article.contents.title.split(' ');
+  const displayedTitle = title.length > 7 ? `${title.slice(0, 7).join(' ')}...` : title.join(' ');
+
+
   return (
     <Card sx={{ maxWidth: '25%', maxHeight: '400px', margin: '10px', backgroundColor: '#e6e6e6' }}>
       <Link to={`/article/${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -23,10 +27,11 @@ function ArticleSummary({ article }) {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {article.contents.title} {/* Access the title from article.contents */}
+              {/* {article.contents.title.split(' ').slice(0, 7).join(' ')} getting title from article.contents */}
+              {displayedTitle}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {article.contents.paragraphs[0]} {/* Display the first paragraph as summary */}
+              {article.contents.paragraphs[0].split(' ').slice(0, 10).join(' ')} {/* 2 display the first paragraph 10 wrds as summary */}
             </Typography>
           </CardContent>
         </CardActionArea>

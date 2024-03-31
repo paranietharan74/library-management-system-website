@@ -1,5 +1,3 @@
-import { useHistory } from 'react-router-dom';
-
 const appendCurrentPath = (link) => {
   const currentPath = window.location.origin;
   return `${currentPath}/${link}`;

@@ -7,7 +7,7 @@ function Comment({ comment }) {
 
     return (
         <>
-            <Paper style={{ padding: "40px 20px" }}>
+            <Paper style={{ padding: "20px 10px" }}>
                 <Grid container wrap="nowrap" spacing={2}>
                     <Grid item>
                         <Avatar alt="Remy Sharp" src={imgLink} />
@@ -21,7 +21,8 @@ function Comment({ comment }) {
                     </Grid>
                 </Grid>
             </Paper>
-            <Divider variant="fullWidth" style={{ margin: "30px 0" }} />
+            
+            <Divider variant="fullWidth" style={{ margin: "5px 0" }} />
         </>
     );
 }

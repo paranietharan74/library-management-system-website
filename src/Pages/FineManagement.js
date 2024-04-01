@@ -1,11 +1,12 @@
 import React from 'react';
-import PersistentDrawerLeft from "../components/PersistentDrawerLeft";
 import styles from './style/FineManagementStyle.module.css'; // Import the CSS module
+import UserNavBar from '../components/UserNavBar'; // Import the UserNavBar component
 
 function FineManagement() {
     return (
-        <div>
-            <PersistentDrawerLeft>
+        <>
+            <UserNavBar />
+            <div>
                 <div className={styles.fineManagementContainer}>
                     <div className={styles.fineManagementHeader}>
                         <h1>Fine Payment Receipt</h1>
@@ -40,8 +41,8 @@ function FineManagement() {
                         <p>After 7 March 2024 your Library account will be suspended</p>
                     </div>
                 </div>
-            </PersistentDrawerLeft>
-        </div>
+            </div>
+        </>
     );
 }
 

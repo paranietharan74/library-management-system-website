@@ -1,4 +1,7 @@
-/* Notification Container */
+.UserMessages{
+    width: 100%;
+}
+
 .notificationContainer {
     display: flex;
     justify-content: center;
@@ -6,7 +9,7 @@
     background-color: #fbf9fa;
 }
 
-/* Notifications */
+
 .notifications {
     width: 70%;
     /* Adjust the width of the notifications container */
@@ -15,7 +18,7 @@
     margin-left: 2vw;
 }
 
-/* Style for individual messages */
+
 .notification {
     background-color: #f0f0f0;
     /* Light gray background */

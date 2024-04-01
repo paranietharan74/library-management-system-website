@@ -1,120 +1,87 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
+import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import Logout from '@mui/icons-material/Logout';
-import SearchIcon from '@mui/icons-material/Search';
-import styles from './style/UserNavBarStyle.module.css';
+import Typography from '@mui/material/Typography';
+import Badge from '@mui/material/Badge';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import MailIcon from '@mui/icons-material/Mail';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Link } from 'react-router-dom';
 
-export default function UserNavBar() {
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    const [searchText, setSearchText] = useState('');
-
-    const handleKeyDown = (event) => {
-        if (event.key === 'Enter') {
-            console.log("Search Text:", searchText);
-        }
-    };
-
-    const sendSearchText = (event) => {
-        console.log("Search Text:", searchText);
-    };
+export default function MemberTopNavBar() {
 
     return (
-        <React.Fragment>
-            <div className={styles.navbarContainer}>
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', textAlign: 'center' }}>
-                    <div className={styles.searchIconContainer}>
-                        <input
-                            type="text"
-                            placeholder="Search for books"
-                            value={searchText}
-                            onChange={(e) => setSearchText(e.target.value)}
-                            onKeyDown={handleKeyDown}
-                            className={styles.searchInput}
-                        />
-                        <IconButton onClick={sendSearchText}>
-                            <SearchIcon sx={{ mr: 2 }} />
-                        </IconButton>
-                    </div>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static" sx={{ backgroundColor: 'linear-gradient(to right, #1a33ad, #8184fe)' }} style={{ borderRadius: '10px' }}>
+                <Toolbar>
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="div"
+                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                        style={{ color: 'black', borderRadius: '5px' }}
+                    >
+                        Libray Management System
+                    </Typography>
 
-                    <Tooltip title="Account settings">
-                        <IconButton
-                            onClick={handleClick}
-                            size="small"
-                            aria-controls={open ? 'account-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open ? 'true' : undefined}
-                        >
-                            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+                    <Box sx={{ flexGrow: 1 }} />
+                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+
+                        {/* My books icon */}
+                        <Link to="/mybooks" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                                <span style={{ color: 'black' }}><AutoStoriesIcon /></span>
+                            </IconButton>
+                        </Link>
+
+                        {/* Fine icon */}
+                        <Link to="/fine" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                                <span style={{ color: 'black' }}><MonetizationOnIcon /></span>
+                            </IconButton>
+                        </Link>
+
+                        {/* Mail icon count */}
+                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                            <Badge badgeContent={4} color="error" badgeContentColor="red">
+                                <span style={{ color: 'black' }}>
+                                    <MailIcon />
+                                </span>
+                            </Badge>
                         </IconButton>
-                    </Tooltip>
-                </Box>
-                <Menu
-                    anchorEl={anchorEl}
-                    id="account-menu"
-                    open={open}
-                    onClose={handleClose}
-                    onClick={handleClose}
-                    PaperProps={{
-                        elevation: 0,
-                        sx: {
-                            overflow: 'visible',
-                            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                            mt: 1.5,
-                            '& .MuiAvatar-root': {
-                                width: 32,
-                                height: 32,
-                                ml: -0.5,
-                                mr: 1,
-                            },
-                            '&::before': {
-                                content: '""',
-                                display: 'block',
-                                position: 'absolute',
-                                top: 0,
-                                right: 14,
-                                width: 10,
-                                height: 10,
-                                bgcolor: 'background.paper',
-                                transform: 'translateY(-50%) rotate(45deg)',
-                                zIndex: 0,
-                            },
-                        },
-                    }}
-                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-                >
-                    <MenuItem onClick={handleClose}>
-                        <Avatar /> Profile
-                    </MenuItem>
-                    <Divider />
-                    <MenuItem onClick={handleClose}>
-                        Article Section
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                        <ListItemIcon>
-                            <Logout fontSize="small" />
-                        </ListItemIcon>
-                        Logout
-                    </MenuItem>
-                </Menu>
-            </div>
-        </React.Fragment>
+
+                        {/* Bell icon count */}
+                        <Link to="/message" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton
+                                size="large"
+                                aria-label="show 17 new notifications"
+                                color="inherit"
+                            >
+                                <Badge badgeContent={17} color="error">
+                                    <NotificationsIcon style={{ color: 'black' }} />
+                                </Badge>
+                            </IconButton>
+                        </Link>
+
+                        {/* Profile icon */}
+                        <IconButton
+                            size="large"
+                            edge="end"
+                            aria-label="account of current user"
+                            aria-haspopup="true"
+                            color="inherit"
+                        >
+                            <span style={{ color: 'black' }}>
+                                <AccountCircle /></span>
+                        </IconButton>
+                    </Box>
+                </Toolbar>
+            </AppBar>
+        </Box>
     );
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaEdit } from 'react-icons/fa';
-import PersistentDrawerLeft from '../components/PersistentDrawerLeft';
 import styles from './style/Profile.module.css';
 import './style/Profile.module.css';
+import UserNavBar from '../components/UserNavBar';
 
 function Profile() {
     const [formData, setFormData] = useState({
@@ -60,66 +60,67 @@ function Profile() {
     };
 
     return (
-        <div>
-            <PersistentDrawerLeft />
-
-            <div className={styles.content}>
-                <h1>Profile</h1>
-                <br />
-                <div className={styles.inputContainer}>
-                    <input
-                        type="text"
-                        name="field1"
-                        value={formData.field1}
-                        onChange={handleInputChange}
-                        disabled
-                    />
-                    {/* <FaEdit className={styles.editIcon} /> */}
-                </div>
-                <div className={styles.inputContainer}>
-                    <input
-                        type="text"
-                        name="field2"
-                        value={formData.field2}
-                        onChange={handleInputChange}
-                        disabled
-                    />
-                    {/* <FaEdit className={styles.editIcon} /> */}
-                </div>
-                <div className={styles.inputContainer}>
-                    <input
-                        type="text"
-                        name="field3"
-                        value={formData.field3}
-                        onChange={handleInputChange}
-                    />
-                    <FaEdit className={styles.editIcon} />
-                </div>
-                <div className={styles.inputContainer}>
-                    <input
-                        type="text"
-                        name="field4"
-                        value={formData.field4}
-                        onChange={handleInputChange}
-                    />
-                    <FaEdit className={styles.editIcon} />
-                </div>
-                {/* <label style={{ color: 'black'}}>
+        <>
+            <UserNavBar />
+            <div>
+                <div className={styles.content}>
+                    <h1>Profile</h1>
+                    <br />
+                    <div className={styles.inputContainer}>
+                        <input
+                            type="text"
+                            name="field1"
+                            value={formData.field1}
+                            onChange={handleInputChange}
+                            disabled
+                        />
+                        {/* <FaEdit className={styles.editIcon} /> */}
+                    </div>
+                    <div className={styles.inputContainer}>
+                        <input
+                            type="text"
+                            name="field2"
+                            value={formData.field2}
+                            onChange={handleInputChange}
+                            disabled
+                        />
+                        {/* <FaEdit className={styles.editIcon} /> */}
+                    </div>
+                    <div className={styles.inputContainer}>
+                        <input
+                            type="text"
+                            name="field3"
+                            value={formData.field3}
+                            onChange={handleInputChange}
+                        />
+                        <FaEdit className={styles.editIcon} />
+                    </div>
+                    <div className={styles.inputContainer}>
+                        <input
+                            type="text"
+                            name="field4"
+                            value={formData.field4}
+                            onChange={handleInputChange}
+                        />
+                        <FaEdit className={styles.editIcon} />
+                    </div>
+                    {/* <label style={{ color: 'black'}}>
                     Picture
                 </label> */}
-                <div className={styles.imageContainer}>
-                    <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handlePictureChange}
-                    />
-                </div>
-                <div className={styles.buttonContainer}>
-                    <button className={styles.savebutton} onClick={handleSave}>Save</button>
-                    <button className={styles.cancelbutton} onClick={handleCancel}>Cancel</button>
+                    <div className={styles.imageContainer}>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handlePictureChange}
+                        />
+                    </div>
+                    <div className={styles.buttonContainer}>
+                        <button className={styles.savebutton} onClick={handleSave}>Save</button>
+                        <button className={styles.cancelbutton} onClick={handleCancel}>Cancel</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

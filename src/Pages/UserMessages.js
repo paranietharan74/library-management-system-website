@@ -1,7 +1,7 @@
 import React from 'react';
 import PageMessage from "../components/PageMessage";
-import PersistentDrawerLeft from "../components/PersistentDrawerLeft";
 import styles from './style/UserMessagesStyle.module.css'; // Import the CSS module
+import UserNavBar from '../components/UserNavBar'; // Import the UserNavBar component
 
 function UserMessages() {
   const messageStyle = {
@@ -12,7 +12,8 @@ function UserMessages() {
   };
 
   return (
-    <PersistentDrawerLeft>
+    <div className={styles.UserMessages}>
+      <UserNavBar />
       <div className={styles.notificationContainer}>
         <div className={styles.notifications} style={{ marginLeft: 0 }}>
           <PageMessage heading="heading-1" message="Custom message 1" style={messageStyle} />
@@ -23,7 +24,7 @@ function UserMessages() {
           <PageMessage heading="heading-6" message="Custom message 6" style={messageStyle} />
         </div>
       </div>
-    </PersistentDrawerLeft>
+    </div>
   );
 }
 

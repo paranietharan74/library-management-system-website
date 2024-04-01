@@ -8,6 +8,7 @@ import MyProfile from './Pages/MyProfile';
 import ViewArticle from './Pages/ViewArticle';
 import ArticleTag from './Pages/ArticleTag';
 import articles from './articles';
+import { Edit } from '@mui/icons-material';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
         <Route
           path="/article/:articleId"
           element={<ViewArticle articles={articles} />}
+        />
+        <Route
+        path='/edit-article/:articleId'
+        element={<EditArticle articles={articles} />}
         />
       </Routes>
     </Router>

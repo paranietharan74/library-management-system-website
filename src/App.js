@@ -6,6 +6,8 @@ import UserHome from './Pages/UserHome';
 import MyBooks from './Pages/MyBooks';
 import Profile from './Pages/Profile';
 
+import Test from './Pages/Test';
+
 function App() {
 
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path='/mybooks' element={<MyBooks />} />
           
           <Route path='/profile' element={<Profile />} />
+
+          <Route path='/test' element={<Test />} />
         </Routes>
       </Router>
     </div>

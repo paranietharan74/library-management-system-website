@@ -6,6 +6,15 @@ function Test() {
     <div>
 
       <UserProfileLeftSideNavBar />
+
+      <h1 style={{background: 'red'}}>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
     </div>
   );
 }

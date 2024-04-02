@@ -4,7 +4,7 @@ import FineManagement from './Pages/FineManagement';
 import UserMessages from './Pages/UserMessages';
 import UserHome from './Pages/UserHome';
 import MyBooks from './Pages/MyBooks';
-import Profile from './Pages/Profile';
+import EditProfile from './Pages/EditProfile';
 
 import Test from './Pages/Test';
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="/fine" element={<FineManagement />} />
           <Route path='/mybooks' element={<MyBooks />} />
           
-          <Route path='/profile' element={<Profile />} />
+          <Route path='/edit-profile' element={<EditProfile />} />
 
           <Route path='/test' element={<Test />} />
         </Routes>

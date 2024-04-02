@@ -1,17 +1,15 @@
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* Fine Management Container */
 .fineManagementContainer {
     border: 2px solid black;
     height: 70vh;
     background-color: #f2f2f2;
+    margin: 5vh 10vw;
 }
 
-/* Fine Management Header */
 .fineManagementHeader {
     color: black;
     padding: 10px;

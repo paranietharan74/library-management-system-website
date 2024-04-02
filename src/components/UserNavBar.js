@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -43,26 +44,17 @@ export default function MemberTopNavBar() {
 
                         {/* My books icon */}
                         <Link to="/mybooks" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <IconButton size="large"color="inherit">
+                            <IconButton size="large" color="inherit">
                                 <span style={{ color: 'black' }}><AutoStoriesIcon /></span>
                             </IconButton>
                         </Link>
 
                         {/* Fine icon */}
                         <Link to="/fine" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <IconButton size="large"olor="inherit">
+                            <IconButton size="large" olor="inherit">
                                 <span style={{ color: 'black' }}><MonetizationOnIcon /></span>
                             </IconButton>
                         </Link>
-
-                        {/* Mail icon count */}
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error" badgeContentColor="red">
-                                <span style={{ color: 'black' }}>
-                                    <MailIcon />
-                                </span>
-                            </Badge>
-                        </IconButton>
 
                         {/* Bell icon count */}
                         <Link to="/message" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -73,6 +65,28 @@ export default function MemberTopNavBar() {
                             >
                                 <Badge badgeContent={17} color="error">
                                     <NotificationsIcon style={{ color: 'black' }} />
+                                </Badge>
+                            </IconButton>
+                        </Link>
+
+                        {/* Mail icon count */}
+                        <Link to="/message" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                                <Badge badgeContent={4} color="error" badgeContentColor="red">
+                                    <span style={{ color: 'black' }}>
+                                        <MailIcon />
+                                    </span>
+                                </Badge>
+                            </IconButton>
+                        </Link>
+
+                        {/* Report icon count */}
+                        <Link to="/complain" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton size="large" color="inherit">
+                                <Badge>
+                                    <span style={{ color: 'black' }}>
+                                        <ReportGmailerrorredIcon />
+                                    </span>
                                 </Badge>
                             </IconButton>
                         </Link>

@@ -6,13 +6,15 @@
 }
 
 .bookFrame {
+    width: 220px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
 
 .userHome {
-    background: url('../../resources/libraryHomeBackground.jpg') no-repeat center center fixed;
+    padding: 10px;
+    /* background: url('../../resources/libraryHomeBackground.jpg') no-repeat center center fixed; */
 }
 
 .home {

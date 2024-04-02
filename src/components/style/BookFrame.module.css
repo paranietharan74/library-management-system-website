@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root{
+    --font-1: 'Oswald', sans-serif;
+    --font-2: 'Abril Fatface', cursive;
+}
+
 .book-frame {
     display: flex;
     flex-direction: column;
@@ -10,22 +18,34 @@
 }
 
 .book-image {
-    width: 200px;
-    /* Set the width of the book image */
+    width: 50px;
     height: auto;
-    /* Maintain aspect ratio */
     margin-bottom: 10px;
-    /* Add some space below the image */
 }
 
 .book-info {
     text-align: center;
-    /* Center-align the book information */
     margin-bottom: 5px;
-    /* Add space below the book information */
+}
+
+.book-info p{
+    font-family: var(--font-2);
 }
 
 .availability-status {
     text-align: center;
-    /* Center-align the availability status */
+}
+
+.available {
+    color: green;
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.notAvailable {
+    color: red;
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 600;
 }

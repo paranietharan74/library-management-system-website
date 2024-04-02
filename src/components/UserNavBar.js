@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
+import HomeIcon from '@mui/icons-material/Home';
+
 export default function MemberTopNavBar() {
 
     return (
@@ -32,16 +34,23 @@ export default function MemberTopNavBar() {
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
 
+                        {/* Home icon */}
+                        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton size="large" color="inherit">
+                                <span style={{ color: 'black' }}><HomeIcon /></span>
+                            </IconButton>
+                        </Link>
+
                         {/* My books icon */}
                         <Link to="/mybooks" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                            <IconButton size="large"color="inherit">
                                 <span style={{ color: 'black' }}><AutoStoriesIcon /></span>
                             </IconButton>
                         </Link>
 
                         {/* Fine icon */}
                         <Link to="/fine" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                            <IconButton size="large"olor="inherit">
                                 <span style={{ color: 'black' }}><MonetizationOnIcon /></span>
                             </IconButton>
                         </Link>

@@ -27,14 +27,14 @@ function UserProfileLeftSideNavBar() {
       </div>
       
       <div className={styles.navItem}>
-        <Link to="/" className={styles.navLink}>
+        <Link to="/edit-profile" className={styles.navLink}>
           <PermIdentityIcon />
           <span className={styles.navText}>Edit Profile</span>
         </Link>
       </div>
 
       <div className={styles.navItem}>
-        <Link to="/explore" className={styles.navLink}>
+        <Link to="/security" className={styles.navLink}>
           <PrivacyTipIcon />
           <span className={styles.navText}>Security</span>
         </Link>

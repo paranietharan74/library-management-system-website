@@ -7,6 +7,7 @@ import MyBooks from './Pages/MyBooks';
 import EditProfile from './Pages/EditProfile';
 
 import Test from './Pages/Test';
+import SecurityPage from './Pages/SecurityPage';
 
 function App() {
 
@@ -20,8 +21,8 @@ function App() {
           <Route path="/message" element={<UserMessages />} />
           <Route path="/fine" element={<FineManagement />} />
           <Route path='/mybooks' element={<MyBooks />} />
-          
           <Route path='/edit-profile' element={<EditProfile />} />
+          <Route path='/security' element={<SecurityPage />} />
 
           <Route path='/test' element={<Test />} />
         </Routes>

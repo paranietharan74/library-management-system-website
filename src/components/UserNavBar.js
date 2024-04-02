@@ -69,16 +69,18 @@ export default function MemberTopNavBar() {
                         </Link>
 
                         {/* Profile icon */}
-                        <IconButton
-                            size="large"
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-haspopup="true"
-                            color="inherit"
-                        >
-                            <span style={{ color: 'black' }}>
-                                <AccountCircle /></span>
-                        </IconButton>
+                        <Link to="/edit-profile" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton
+                                size="large"
+                                edge="end"
+                                aria-label="account of current user"
+                                aria-haspopup="true"
+                                color="inherit"
+                            >
+                                <span style={{ color: 'black' }}>
+                                    <AccountCircle /></span>
+                            </IconButton>
+                        </Link>
                     </Box>
                 </Toolbar>
             </AppBar>

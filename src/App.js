@@ -8,24 +8,20 @@ import MyProfile from './Pages/MyProfile';
 import ViewArticle from './Pages/ViewArticle';
 import ArticleTag from './Pages/ArticleTag';
 import articles from './articles';
-import { Edit } from '@mui/icons-material';
 
 function App() {
   return (
-    <Router> {/* Use Router instead of BrowserRouter */}
+    <Router>
       <Routes>
         <Route path="/about" element={<AboutPage />} />
         <Route path="/article-home" element={<ArticleHome articles={articles} />} />
         <Route path='/publish-articles' element={<PublishArticles />} />
-        <Route path='/article-tag' element={<ArticleTag />} /> {/* Corrected from Router to Route */}
+        <Route path='/article-tag' element={<ArticleTag />} />
         <Route path='/my-profile' element={<MyProfile />} />
+        
         <Route
           path="/article/:articleId"
           element={<ViewArticle articles={articles} />}
-        />
-        <Route
-        path='/edit-article/:articleId'
-        element={<EditArticle articles={articles} />}
         />
       </Routes>
     </Router>

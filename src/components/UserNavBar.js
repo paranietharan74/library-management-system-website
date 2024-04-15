@@ -81,7 +81,7 @@ export default function MemberTopNavBar() {
                         </Link>
 
                         {/* Report icon count */}
-                        <Link to="/complain" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Link to="/complaint" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <IconButton size="large" color="inherit">
                                 <Badge>
                                     <span style={{ color: 'black' }}>

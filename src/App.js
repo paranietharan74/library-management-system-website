@@ -8,6 +8,7 @@ import EditProfile from './Pages/EditProfile';
 
 import Test from './Pages/Test';
 import SecurityPage from './Pages/SecurityPage';
+import Complaint from './Pages/complaint';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           {/* Mihunan */}
           <Route path="/" element={<UserHome />} />
+          <Route path='/complaint' element={<Complaint />} />
 
           {/* Yasothan */}
           <Route path="/message" element={<UserMessages />} />

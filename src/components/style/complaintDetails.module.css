@@ -13,6 +13,7 @@
     border: #56594A solid 2px;
     border-radius: 10px;
     width: 40vw;
+    padding: 20px;
 }
 
 .type {
@@ -24,6 +25,7 @@
 .processStage {
     display: flex;
     align-items: center;
+    color: green;
 }
 
 .processIcon {
@@ -58,5 +60,5 @@
 
 .descriptionText{
     font-family: var(--font-3);
-    font-weight: 400;
+    font-weight: 800;
 }

@@ -9,6 +9,7 @@ import EditProfile from './Pages/EditProfile';
 import Test from './Pages/Test';
 import SecurityPage from './Pages/SecurityPage';
 import Complaint from './Pages/complaint';
+import MakeNewComplaint from './Pages/MakeNewComplaint';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           {/* Mihunan */}
           <Route path="/" element={<UserHome />} />
           <Route path='/complaint' element={<Complaint />} />
+          <Route path='/make-new-complaint' element={<MakeNewComplaint />} />
 
           {/* Yasothan */}
           <Route path="/message" element={<UserMessages />} />

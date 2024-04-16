@@ -1,0 +1,10 @@
+.content{
+    margin-left: calc(15vw + 65px);
+    padding: 10px;
+}
+
+.search{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}

@@ -37,6 +37,11 @@ import SecurityPage from './Pages/SecurityPage';
 import Complaint from './Pages/complaint';
 import MakeNewComplaint from './Pages/MakeNewComplaint';
 
+// Lathisana
+import AdminDashboardHome from './Pages/AdminDashboardHome';
+import BookManagement from './Pages/BookManagement';
+import MembershipManagement from './Pages/MembershipManagement';
+
 function App() {
 
   return (
@@ -80,6 +85,9 @@ function App() {
         <Route path='/test' element={<Test />} />
 
         {/* Lathisana */}
+        <Route path="/admin" element={<AdminDashboardHome />} />
+        <Route path='/admin-book-management' element={<BookManagement />} />
+        <Route path='/membership-management' element={<MembershipManagement />} />
       </Routes>
     </Router>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer style={footerStyle}>
-            <p>©2024 Innovate Coders</p>
+            <p>©2024 InnovateCoders</p>
         </footer>
     );
 };
@@ -13,7 +13,7 @@ const footerStyle = {
     color: '#333',
     textAlign: 'center',
     padding: '0.2rem',
-    marginTop: 'auto', // Set margin-top to push footer to the bottom of the page
-};
+    marginTop: 'auto',
+}
 
 export default Footer;

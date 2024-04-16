@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+.background-image-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #d9d9d9 80%, #2E52C2 20%);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+}
+
+.sign-in {
+    position: absolute;
+    top: 10px;
+    right: 22vw;
+    z-index: 2;
+    width: auto;
+}
+
+.sign-in p {
+    color: black;
+    font-size: 15px;
+}
+
+.sign-in a {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.confirmation-form-container {
+    width: 40vw;
+    height: 50vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    position: relative;
+    margin-left: 20vw;
+}
+
+/* 
+.confirmation-details {
+    margin-top: 15vh;
+    margin-bottom: 20px;
+    padding: 10px 40px;
+}
+
+.confirmation-details p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.first-name input,
+.last-name input {
+    font-weight: bold;
+}
+
+.dob input {
+    font-style: italic;
+}
+
+.class-details {
+    color: #007bff;
+}
+
+.confirm-details-next-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
+.confirmation-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+    margin-bottom: 20px;
+    padding: 10px 40px;
+}
+
+.confirmation-details p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+    text-align: center;
+    /* Align text in center */
+}
+
+.first-name input,
+.last-name input {
+    font-weight: bold;
+    text-align: center;
+    /* Align input text in center */
+}
+
+.dob input {
+    font-style: italic;
+    text-align: center;
+    /* Align input text in center */
+}
+
+.confirmation-details input {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.class-details {
+    color: #007bff;
+    text-align: center;
+    /* Align text in center */
+}
+
+.confirm-details-next-button {
+    margin-top: 20px;
+    /* Add margin for button */
+    align-self: center;
+    /* Align button in center */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.progress-bar {
+    position: absolute;
+    right: 20px;
+    top: 30vh;
+}

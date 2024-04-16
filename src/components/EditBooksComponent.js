@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './styles/EditBookComponent.module.css';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBarComponent';
 import SingleBookSearchResult from './SingleBookSearchResult';
 import BookDetailsEdit from './BookDetailsEdit';
 import exampleImage from '../resources/bookImage.jpg';

@@ -1,5 +1,5 @@
 import ArticleNavBar from "../Components/ArticleNavBar";
-import Footer from "../Components/Footer";
+import Footer from "../Components/LibraryFooter";
 import ProfileCard from "../Components/ProfileCard";
 import styles from "./style/MyProfile.module.css";
 import ArticleSummary from "../Components/ArticleSummary";

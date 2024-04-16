@@ -2,7 +2,7 @@ import React from 'react';
 import BookFrame from "../Components/BookFrame";
 import styles from './style/userHomeStyle.module.css'; // Import the CSS module
 import UserNavbar from '../Components/UserNavBar';
-import Footer from '../Components/Footer';
+import Footer from '../Components/LibraryFooter';
 import { Link } from 'react-router-dom';
 
 function UserHome({ books }) {

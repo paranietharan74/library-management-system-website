@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../Components/Footer';
+import Footer from '../Components/LibraryFooter';
 import backgroundImage from '../Pages/resources/pexels-cottonbro-studio-4855428.jpg'; // Import the image
 import ArticleNavBar from '../Components/ArticleNavBar';
 

@@ -4,7 +4,7 @@ import styles from './style/BookViewStyle.module.css';
 import SendIcon from '@mui/icons-material/Send';
 import UserNavBar from '../Components/UserNavBar';
 import TextRating from '../Components/TextRating';
-import Footer from '../Components/Footer';
+import Footer from '../Components/LibraryFooter';
 
 function ViewBook({ books }) {
     const { id } = useParams();

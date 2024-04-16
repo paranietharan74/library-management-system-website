@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ArticleNavBar from '../Components/ArticleNavBar';
-import Footer from '../Components/Footer';
+import Footer from '../Components/LibraryFooter';
 import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';

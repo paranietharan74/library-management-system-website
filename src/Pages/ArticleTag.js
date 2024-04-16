@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ArticleNavBar from "../Components/ArticleNavBar";
-import Footer from "../Components/Footer";
-import SearchBar from '../Components/SearchBar';
+import Footer from "../Components/LibraryFooter";
+import SearchBar from '../Components/SearchBarComponent';
 import styles from './style/ArticleTag.module.css';
 
 function ArticleTag() {

@@ -1,7 +1,7 @@
 // ArticleHome.js
 import React from 'react';
 import ArticleNavBar from "../Components/ArticleNavBar";
-import Footer from "../Components/Footer";
+import Footer from "../Components/LibraryFooter";
 import ArticleSummary from "../Components/ArticleSummary";
 import styles from './style/ArticleHome.module.css';
 

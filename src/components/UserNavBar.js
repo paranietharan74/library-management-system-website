@@ -15,6 +15,7 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 
 import HomeIcon from '@mui/icons-material/Home';
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 
 export default function MemberTopNavBar() {
 
@@ -34,6 +35,11 @@ export default function MemberTopNavBar() {
 
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <Link to="/article-home" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <IconButton size="large" color="inherit">
+                                <span style={{ color: 'black' }}><LocalLibraryIcon /></span>
+                            </IconButton>
+                        </Link>
 
                         {/* Home icon */}
                         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>

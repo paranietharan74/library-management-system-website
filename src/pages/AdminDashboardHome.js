@@ -3,7 +3,7 @@ import LibrarianTopNavBar from "../Components/LibrarianTopNavBar";
 import LibraryBookCount from "../Components/LibraryBookCount";
 import React from 'react';
 import styles from './styles/AdminDashBoardHome.module.css';
-import SearchBar from '../Components/SearchBar';
+import SearchBar from '../Components/SearchBarComponent';
 import SingleSearchResult from "../Components/SingleSearchResult";
 import exampleImage from '../resources/sample-picture.jpg';
 

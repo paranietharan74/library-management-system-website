@@ -24,7 +24,7 @@ const pages = ['Tags', 'Home', 'About'];
 const links = ['article-tag', 'article-home', 'about'];
 
 const settings = ['Profile', 'Library book', 'About','Publish Articles', 'Logout'];
-const settingslinks = ['my-profile', 'home', 'about','publish-articles', 'logout'];
+const settingslinks = ['my-profile', '', 'about','publish-articles', 'logout'];
 
 function ArticleNavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);

@@ -5,7 +5,7 @@ import styles from './style/ViewArticle.module.css';
 import HoverRating from '../Components/HoverRating';
 import ViewComments from '../Components/ViewComments';
 import ArticleBreadCrumbs from '../Components/ArticleBreadCrumbs';
-import Footer from '../Components/Footer';
+import Footer from '../Components/LibraryFooter';
 
 function ViewArticle({ articles }) {
     const { articleId } = useParams();

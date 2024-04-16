@@ -3,7 +3,6 @@ import UserNavBar from '../components/UserNavBar';
 import ComplaintDetails from '../components/ComplaintDetails';
 
 import MakeComplaint from '../components/MakeComplaint';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
 function Complaint() {
     const complaintSection = 'Library';

@@ -1,3 +1,7 @@
+.bookFrameItem a{
+    text-decoration: none;
+}
+
 .bookFrameItem {
     display: flex;
     flex-wrap: wrap;

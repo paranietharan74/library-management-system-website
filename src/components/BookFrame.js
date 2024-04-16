@@ -7,10 +7,11 @@ function BookFrame({ book }) {
 
     return (
         <div className={styles.bookFrame}>
-            <img className={styles.bookImage} src={book.image} alt={book.title} />
+            <img className={styles.bookImage} src={book.bookImage} alt={book.title} />
             <div className={styles.bookInfo}>
                 <p>{book.title}</p>
-                <p>{book.author}</p>
+                <p>{book.authorDetails.name}</p>
+                <p>{book.authorDetails.publishedDate}</p>
             </div>
             <div className={`${styles.availabilityStatus} ${availabilityStyle}`}>
                 <p>{book.availability ? 'Available' : 'Not Available'}</p>

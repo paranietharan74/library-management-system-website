@@ -1,121 +1,35 @@
 import React from 'react';
 import BookFrame from "../components/BookFrame";
-import imgSrc from "../resources/book-cover.jpg";
 import styles from './style/userHomeStyle.module.css'; // Import the CSS module
 import UserNavbar from '../components/UserNavBar';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
-function UserHome() {
+function UserHome({ books }) {
+    if (!Array.isArray(books)) {
+        return <div>Error: books prop is not an array</div>;
+    }
+
     return (
         <div className={styles.home}>
             <UserNavbar />
             <div className={styles.userHome}>
                 <div className={styles.bookFrameItem}>
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
 
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
+                    {books.map((book) => (
+                        <Link to={`/book/${book.id}`} key={book.id}>
+                            <div className={styles.bookFrame}>
+                                <BookFrame book={book} />
+                            </div>
+                        </Link>
+                    ))}
 
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
-
-                    <div className={styles.bookFrame}>
-                        <BookFrame book={{
-                            title: "The Great Gatsby",
-                            author: "F. Scott Fitzgerald",
-                            availability: "Available",
-                            image: imgSrc
-                        }} />
-                    </div>
                 </div>
             </div>
-
-
             <Footer />
-        </div>
+        </div >
     );
 }
+
 
 export default UserHome;

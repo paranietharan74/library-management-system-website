@@ -10,6 +10,9 @@ import Test from './Pages/Test';
 import SecurityPage from './Pages/SecurityPage';
 import Complaint from './Pages/complaint';
 import MakeNewComplaint from './Pages/MakeNewComplaint';
+import ViewBook from './Pages/ViewBook';
+
+import books from './book';
 
 function App() {
 
@@ -18,9 +21,10 @@ function App() {
       <Router>
         <Routes>
           {/* Mihunan */}
-          <Route path="/" element={<UserHome />} />
+          <Route path="/" element={<UserHome books={books}/>} />
           <Route path='/complaint' element={<Complaint />} />
           <Route path='/make-new-complaint' element={<MakeNewComplaint />} />
+          <Route path="/book/:id" element={<ViewBook books={books} />} />
 
           {/* Yasothan */}
           <Route path="/message" element={<UserMessages />} />

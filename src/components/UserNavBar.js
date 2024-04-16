@@ -70,7 +70,7 @@ export default function MemberTopNavBar() {
                         </Link>
 
                         {/* Mail icon count */}
-                        <Link to="/message" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Link to="/user-chat" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                                 <Badge badgeContent={4} color="error" badgeContentColor="red">
                                     <span style={{ color: 'black' }}>

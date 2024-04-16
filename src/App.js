@@ -13,6 +13,7 @@ import MakeNewComplaint from './Pages/MakeNewComplaint';
 import ViewBook from './Pages/ViewBook';
 
 import books from './book';
+import UserChat from './Pages/UserChat';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/complaint' element={<Complaint />} />
           <Route path='/make-new-complaint' element={<MakeNewComplaint />} />
           <Route path="/book/:id" element={<ViewBook books={books} />} />
+          <Route path='/user-chat' element={<UserChat />} />
 
           {/* Yasothan */}
           <Route path="/message" element={<UserMessages />} />

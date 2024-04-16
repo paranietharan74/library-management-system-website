@@ -1,20 +1,12 @@
 import React from 'react';
-import UserProfileLeftSideNavBar from '../components/UserProfileLeftSideNavBar';
+import { MessageLeft, MessageRight } from '../components/Message';
 
 function Test() {
   return (
     <div>
 
-      <UserProfileLeftSideNavBar />
-
-      <h1 style={{background: 'red'}}>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
+      <MessageLeft />
+      <MessageRight />
     </div>
   );
 }

@@ -8,7 +8,20 @@
     margin-left: 20vw;
 }
 
-.addbutton{
+.buttongroup{
+    text-align: center;
+}
+
+.buttongroup button{
+    padding: 10px;
+    margin: 10px;
+    width: 7vw;
+    height: auto;
+    border-color: #808080;
+    border-radius: 10px;
+}
+
+/* .addbutton{
     padding: 10px;
     margin: 10px;
     width: 7vw;
@@ -24,4 +37,4 @@
     height: auto;
     border-color: #808080;
     border-radius: 10px;
-}
+} */

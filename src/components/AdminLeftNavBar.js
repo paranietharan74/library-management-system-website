@@ -18,7 +18,7 @@ const AdminLeftNavBar = () => {
 
                 <div className={styles.sidebarContent}>
                     <div className={styles.sidebarList}>
-                        <Link to="/" className={`${styles.sidebarLink} ${styles.activeLink}`}>
+                        <Link to="/admin" className={`${styles.sidebarLink} ${styles.activeLink}`}>
                             <span className={styles.sidebarLinkName}>Home</span>
                         </Link>
                         <Link to="/admin-book-management" className={`${styles.sidebarLink} ${styles.activeLink}`}>
@@ -27,7 +27,7 @@ const AdminLeftNavBar = () => {
                         <Link to="/membership-management" className={`${styles.sidebarLink} ${styles.activeLink}`}>
                             <span className={styles.sidebarLinkName}>Membership Management</span>
                         </Link>
-                        <Link to="/" className={`${styles.sidebarLink} ${styles.activeLink}`}>
+                        <Link to="/librarian-chat" className={`${styles.sidebarLink} ${styles.activeLink}`}>
                             <span className={styles.sidebarLinkName}>Chat</span>
                         </Link>
                     </div>

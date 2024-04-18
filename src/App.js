@@ -41,6 +41,7 @@ import MakeNewComplaint from './Pages/MakeNewComplaint';
 import AdminDashboardHome from './Pages/AdminDashboardHome';
 import BookManagement from './Pages/BookManagement';
 import MembershipManagement from './Pages/MembershipManagement';
+import LibrarianChat from './Pages/LibrarianChat';
 
 function App() {
 
@@ -82,12 +83,13 @@ function App() {
         <Route path='/edit-profile' element={<EditProfile />} />
         <Route path='/security' element={<SecurityPage />} />
 
-        <Route path='/test' element={<Test />} />
-
         {/* Lathisana */}
         <Route path="/admin" element={<AdminDashboardHome />} />
         <Route path='/admin-book-management' element={<BookManagement />} />
         <Route path='/membership-management' element={<MembershipManagement />} />
+        <Route path='/librarian-chat' element={<LibrarianChat />} />
+
+        <Route path='/test' element={<Test />} />
       </Routes>
     </Router>
   );

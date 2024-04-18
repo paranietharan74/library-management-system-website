@@ -2,7 +2,7 @@ import AdminLeftNavBar from "../Components/AdminLeftNavBar";
 import LibrarianTopNavBar from "../Components/LibrarianTopNavBar";
 import LibraryBookCount from "../Components/LibraryBookCount";
 import React from 'react';
-import styles from './styles/AdminDashBoardHome.module.css';
+import styles from './style/AdminDashBoardHome.module.css';
 import SearchBar from '../Components/SearchBarComponent';
 import SingleSearchResult from "../Components/SingleSearchResult";
 import exampleImage from '../resources/sample-picture.jpg';

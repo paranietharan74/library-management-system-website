@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import style from './styles/MembershipManagement.module.css';
+import style from './style/MembershipManagement.module.css';
 import LibrarianTopNavBar from '../Components/LibrarianTopNavBar';
 import AdminLeftNavBar from '../Components/AdminLeftNavBar';
 
@@ -9,6 +9,7 @@ import DeleteMemberComponent from '../Components/DeleteMemberComponent';
 
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
+import BorderColorIcon from '@mui/icons-material/BorderColor';
 
 function MembershipManagement() {
     const [showAddMember, setShowAddMember] = useState(true); // 2 control what component 2 display
@@ -28,14 +29,24 @@ function MembershipManagement() {
 
             <div className={style.contents}>
                 <div className={style.buttongroup}>
+                    {/* 4 add members */}
                     <button className={style.addbutton} onClick={handleAddMemberClick}>
                         <PersonAddIcon />
                         <p>Add Membership</p>
                     </button>
+
+                    {/*4 Edit member details */}
+                    <button className={style.editButton}>
+                        <BorderColorIcon />
+                        <p>Edit members</p>
+                    </button>
+
+                    {/* 4 delete members */}
                     <button className={style.removebutton} onClick={handleDeleteMemberClick}>
                         <PersonRemoveIcon />
                         <p>Remove Membership</p>
                     </button>
+
                 </div>
                 {showAddMember ? <AddMemberComponent /> : <DeleteMemberComponent />}
             </div>

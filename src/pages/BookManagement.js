@@ -1,5 +1,4 @@
 import React from "react";
-import AdminLeftNavBar from "../Components/AdminLeftNavBar";
 import LibrarianTopNavBar from "../Components/LibrarianTopNavBar";
 import style from "./style/BookManagement.module.css";
 import AddBooksComponent from "../Components/AddBooksComponent";
@@ -10,6 +9,7 @@ import { useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import Footer from "../Components/LibraryFooter";
 
 function BookManagement() {
     const [displayComponent, setDisplayComponent] = useState('add');
@@ -21,7 +21,6 @@ function BookManagement() {
     return (
         <div className={style.bookManagementPage}>
             <LibrarianTopNavBar />
-            <AdminLeftNavBar />
 
             <div className={style.content}>
                 <div className={style.menuItems}>
@@ -36,6 +35,8 @@ function BookManagement() {
                     {displayComponent === 'delete' && <DeleteBooksComponent />}
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }

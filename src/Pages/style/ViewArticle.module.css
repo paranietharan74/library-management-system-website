@@ -5,16 +5,20 @@
     min-height: 100vh;
 }
 
+.ViewArticle{
+    padding: 5px 0px;
+}
+
 .content {
     background-color: #F5F5F5;
 }
 
 .navbar{
     background-color: #e6e6e6;
-    height: 3vh;
-    padding: 2vh 2vw;
+    height: 8vh;
+    padding: 10px 2vw;
     border: #8c8c8c 2px solid;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 .articleImage {

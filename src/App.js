@@ -42,6 +42,7 @@ import AdminDashboardHome from './Pages/AdminDashboardHome';
 import BookManagement from './Pages/BookManagement';
 import MembershipManagement from './Pages/MembershipManagement';
 import LibrarianChat from './Pages/LibrarianChat';
+import ArticleManagement from './Pages/ArticleManagement';
 
 function App() {
 
@@ -88,6 +89,7 @@ function App() {
         <Route path='/admin-book-management' element={<BookManagement />} />
         <Route path='/membership-management' element={<MembershipManagement />} />
         <Route path='/librarian-chat' element={<LibrarianChat />} />
+        <Route path='/librarian-article-management' element={<ArticleManagement articles={articles}/>} />
 
         <Route path='/test' element={<Test />} />
       </Routes>

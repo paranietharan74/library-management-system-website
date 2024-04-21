@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import style from './style/MembershipManagement.module.css';
 import LibrarianTopNavBar from '../Components/LibrarianTopNavBar';
-import AdminLeftNavBar from '../Components/AdminLeftNavBar';
 
 import AddMemberComponent from '../Components/AddMemberComponent';
 import DeleteMemberComponent from '../Components/DeleteMemberComponent';
@@ -10,6 +9,7 @@ import DeleteMemberComponent from '../Components/DeleteMemberComponent';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
+import Footer from '../Components/LibraryFooter';
 
 function MembershipManagement() {
     const [showAddMember, setShowAddMember] = useState(true); // 2 control what component 2 display
@@ -25,7 +25,6 @@ function MembershipManagement() {
     return (
         <div className={style.MembershipManagement}>
             <LibrarianTopNavBar />
-            <AdminLeftNavBar />
 
             <div className={style.contents}>
                 <div className={style.buttongroup}>
@@ -50,6 +49,8 @@ function MembershipManagement() {
                 </div>
                 {showAddMember ? <AddMemberComponent /> : <DeleteMemberComponent />}
             </div>
+
+            <Footer />
         </div>
     );
 }

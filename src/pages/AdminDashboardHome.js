@@ -1,4 +1,3 @@
-import AdminLeftNavBar from "../Components/AdminLeftNavBar";
 import LibrarianTopNavBar from "../Components/LibrarianTopNavBar";
 import LibraryBookCount from "../Components/LibraryBookCount";
 import React from 'react';
@@ -11,13 +10,12 @@ function AdminDashboardHome() {
   return (
     <div>
       <LibrarianTopNavBar />
-      <AdminLeftNavBar />
 
       <div className={styles.content}>
         <LibraryBookCount />
 
         <div className={styles.search}>
-          <SearchBar />
+          <SearchBar width="100%" />
 
           <div className={styles.searchResults}>
             <SingleSearchResult

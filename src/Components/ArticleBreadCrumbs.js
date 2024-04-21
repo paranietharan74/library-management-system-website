@@ -25,9 +25,14 @@ const StyledBreadcrumb = styled(Chip)(({ theme }) => {
   };
 });
 
+const Container = styled('div')({
+  overflowY: 'auto',
+  maxHeight: '50px', // Adjust the max-height as needed
+});
+
 export default function ArticleBreadCrumbs() {
   return (
-    <div role="presentation">
+    <Container>
       <Breadcrumbs aria-label="breadcrumb">
         <StyledBreadcrumb
           component="a"
@@ -38,6 +43,6 @@ export default function ArticleBreadCrumbs() {
         />
         <StyledBreadcrumb component="a" href="#" label="Article" />
       </Breadcrumbs>
-    </div>
+    </Container>
   );
 }

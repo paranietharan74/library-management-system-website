@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles/AdminLeftNavBar.module.css';
+import styles from './style/AdminLeftNavBar.module.css';
 import exmpleImage from '../resources/sample-picture.jpg';
 import { Link } from 'react-router-dom';
 

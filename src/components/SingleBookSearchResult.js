@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './styles/SingleSearchResult.module.css';
-import { Description } from '@mui/icons-material';
+import styles from './style/SingleSearchResult.module.css';
 
 const SingleBookSearchResult = ({ profileImage, name, bookName, Description, isbn, count, onClick }) => {
   return (

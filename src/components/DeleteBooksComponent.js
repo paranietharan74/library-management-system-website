@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './styles/DeleteBooksComponent.module.css';
+import styles from './style/DeleteBooksComponent.module.css';
 import SearchBar from './SearchBarComponent';
 import SingleBookSearchResult from './SingleBookSearchResult';
 import DeleteIcon from '@mui/icons-material/Delete';

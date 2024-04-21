@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles/DisplayMemberVerificationDetails.module.css';
+import styles from './style/DisplayMemberVerificationDetails.module.css';
 
 function DisplayMemberVerificationDetails({ memberDetails, onConfirm, onGoToMainMenu }) {
     const handleConfirm = () => {

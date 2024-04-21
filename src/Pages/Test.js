@@ -1,12 +1,19 @@
 import React from 'react';
-import { MessageLeft, MessageRight } from '../Components/Message';
+import ContactElement from '../Components/ContactElement';
 
 function Test() {
   return (
     <div>
-
-      <MessageLeft />
-      <MessageRight />
+      <ContactElement
+        name="John Doe"
+        message="Hey there! How are you?"
+        imgSrc="https://example.com/avatar.jpg"
+      />
+      <ContactElement
+        name="Alice Smith"
+        message="Hi, I'm doing great. Thanks for asking!"
+        imgSrc="https://example.com/avatar2.jpg"
+      />
     </div>
   );
 }

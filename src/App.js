@@ -76,6 +76,8 @@ function App() {
         <Route path='/make-new-complaint' element={<MakeNewComplaint />} />
         <Route path="/book/:id" element={<ViewBook books={books} />} />
         <Route path='/user-chat' element={<UserChat />} />
+        {/*Librarian Chat */}
+        <Route path='/librarian-chat' element={<LibrarianChat />} />
 
         {/* Yasothan */}
         <Route path="/message" element={<UserMessages />} />
@@ -88,7 +90,6 @@ function App() {
         <Route path="/admin" element={<AdminDashboardHome />} />
         <Route path='/admin-book-management' element={<BookManagement />} />
         <Route path='/membership-management' element={<MembershipManagement />} />
-        <Route path='/librarian-chat' element={<LibrarianChat />} />
         <Route path='/librarian-article-management' element={<ArticleManagement articles={articles}/>} />
 
         <Route path='/test' element={<Test />} />

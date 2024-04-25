@@ -40,7 +40,7 @@ export default function MakeComplaint() {
                 open={open}
             >
                 <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-                    Modal title
+                    Terms and Conditions
                 </DialogTitle>
                 <IconButton
                     aria-label="close"

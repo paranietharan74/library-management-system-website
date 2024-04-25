@@ -44,6 +44,7 @@ import BookManagement from './Pages/BookManagement';
 import MembershipManagement from './Pages/MembershipManagement';
 import LibrarianChat from './Pages/LibrarianChat';
 import ArticleManagement from './Pages/ArticleManagement';
+import TermsAndPolicies from './Pages/TermsAndPolicies';
 
 function App() {
 
@@ -87,6 +88,7 @@ function App() {
         <Route path='/edit-profile' element={<EditProfile />} />
         <Route path='/security' element={<SecurityPage />} />
         <Route path='/notifications' element={<Notifications />} />
+        <Route path='/terms' element={<TermsAndPolicies />} />
 
         {/* Lathisana */}
         <Route path="/admin" element={<AdminDashboardHome />} />

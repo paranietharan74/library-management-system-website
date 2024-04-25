@@ -41,7 +41,7 @@ function UserProfileLeftSideNavBar() {
       </div>
 
       <div className={styles.navItem}>
-        <Link to="/settings" className={styles.navLink}>
+        <Link to="/notifications" className={styles.navLink}>
           <NotificationsNoneIcon />
           <span className={styles.navText}>Notifications</span>
         </Link>

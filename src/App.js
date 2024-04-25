@@ -26,6 +26,8 @@ import UserHome from './Pages/UserHome';
 import books from './book';
 import UserChat from './Pages/UserChat';
 import ViewBook from './Pages/ViewBook';
+import Complaint from './Pages/complaint';
+import MakeNewComplaint from './Pages/MakeNewComplaint';
 
 // Yasothan
 import Test from './Pages/Test';
@@ -34,8 +36,7 @@ import UserMessages from './Pages/UserMessages';
 import MyBooks from './Pages/MyBooks';
 import EditProfile from './Pages/EditProfile';
 import SecurityPage from './Pages/SecurityPage';
-import Complaint from './Pages/complaint';
-import MakeNewComplaint from './Pages/MakeNewComplaint';
+import Notifications from './Pages/Notifications';
 
 // Lathisana
 import AdminDashboardHome from './Pages/AdminDashboardHome';
@@ -60,7 +61,7 @@ function App() {
           element={<ViewArticle articles={articles} />}
         />
 
-        {/*Shobikan */}~
+        {/*Shobikan */}
         <Route path="/login" element={<Login />} />
         <Route path='/details-fill' element={<DetailsFilling />} />
         <Route path='/details-confirmation' element={<DetailsConfirmation />} />
@@ -85,6 +86,7 @@ function App() {
         <Route path='/mybooks' element={<MyBooks />} />
         <Route path='/edit-profile' element={<EditProfile />} />
         <Route path='/security' element={<SecurityPage />} />
+        <Route path='/notifications' element={<Notifications />} />
 
         {/* Lathisana */}
         <Route path="/admin" element={<AdminDashboardHome />} />

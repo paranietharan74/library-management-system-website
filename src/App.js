@@ -56,7 +56,7 @@ function App() {
         <Route path="/article-home" element={<ArticleHome articles={articles} />} />
         <Route path='/publish-articles' element={<PublishArticles />} />
         <Route path='/article-tag' element={<ArticleTag />} />
-        <Route path='/my-profile' element={<MyProfile />} />
+        <Route path='/my-profile' element={<MyProfile articles={articles}/>} />
         <Route
           path="/article/:articleId"
           element={<ViewArticle articles={articles} />}

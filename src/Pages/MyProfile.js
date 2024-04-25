@@ -4,7 +4,7 @@ import ProfileCard from "../Components/ProfileCard";
 import styles from "./style/MyProfile.module.css";
 import ArticleSummary from "../Components/ArticleSummary";
 
-function MyProfile() {
+function MyProfile({articles}) {
   return (
     <div className={styles.myProfile}>
       <div className={styles.myProfileHeader}>
@@ -26,42 +26,13 @@ function MyProfile() {
           <h2>My Articles</h2>
 
           <div className={styles.articleList}>
-            <ArticleSummary
-              articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-              title="Sample Article Title"
-            />
-
-            <ArticleSummary
-              articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-              title="Sample Article Title"
-            />
-
-            <ArticleSummary
-              articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-              title="Sample Article Title"
-            />
-
-            <ArticleSummary
-              articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-              title="Sample Article Title"
-            />
-
-            <ArticleSummary
-              articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-              title="Sample Article Title"
-            />
-
-            <ArticleSummary
-              articleImage="https://images.pexels.com/photos/19402529/pexels-photo-19402529/free-photo-of-woman-behind-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero vitae nisl aliquam ultricies. Sed tristique, odio sit amet pretium commodo, mauris velit ultricies justo, a aliquet risus ipsum vel turpis."
-              title="Sample Article Title"
-            />
+            {articles
+              .filter(article => ["1"," 3", "5"].includes(article.id)) // Display [1, 3, 5]
+              .map((article) => (
+                <ArticleSummary key={article.id} article={article} />
+              ))}
           </div>
+
         </div>
       </div>
 

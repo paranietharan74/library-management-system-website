@@ -95,6 +95,7 @@ function App() {
         <Route path='/admin-book-management' element={<BookManagement />} />
         <Route path='/membership-management' element={<MembershipManagement />} />
         <Route path='/librarian-article-management' element={<ArticleManagement articles={articles}/>} />
+        <Route path='/admin-fine-management' element={<AdminFineManagement />} />
 
         <Route path='/test' element={<Test />} />
       </Routes>

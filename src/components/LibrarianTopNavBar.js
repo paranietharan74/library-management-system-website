@@ -83,7 +83,7 @@ export default function LibrarianTopNavBar() {
                         </Link>
 
                         {/*Fine Management */}
-                        <Link to="/">
+                        <Link to="/admin-fine-management">
                             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                                 <span style={{ color: 'black' }}>
                                     <RequestQuoteIcon />

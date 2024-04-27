@@ -92,7 +92,7 @@ export default function LibrarianTopNavBar() {
                         </Link>
 
                         {/*Settings */}
-                        <Link to="/">
+                        <Link to="/admin-settings">
                             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                                 <span style={{ color: 'black' }}>
                                     <SettingsIcon />
@@ -101,25 +101,29 @@ export default function LibrarianTopNavBar() {
                         </Link>
 
                         {/* Notification Control */}
-                        <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
-                            <span style={{ color: 'black' }}>
-                                <NotificationsIcon />
-                            </span>
-                        </IconButton>
+                        <Link to="/admin-notification-control">
+                            <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
+                                <span style={{ color: 'black' }}>
+                                    <NotificationsIcon />
+                                </span>
+                            </IconButton>
+                        </Link>
 
                         {/* Profile icon */}
-                        <IconButton
-                            size="large"
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-haspopup="true"
-                            color="inherit"
-                        >
-                            <span style={{ color: 'black' }}>
-                                <AccountCircle /></span>
-                        </IconButton>
+                        <Link to="/admin-profile-management">
+                            <IconButton
+                                size="large"
+                                edge="end"
+                                aria-label="account of current user"
+                                aria-haspopup="true"
+                                color="inherit"
+                            >
+                                <span style={{ color: 'black' }}>
+                                    <AccountCircle /></span>
+                            </IconButton>
+                        </Link>
 
-                        <Link to="/">
+                        <Link to="/admin">
                             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                                 <span style={{ color: 'black' }}>
                                     <LogoutIcon />

@@ -8,6 +8,7 @@ import ArticleBreadCrumbs from '../Components/ArticleBreadCrumbs';
 import Footer from '../Components/LibraryFooter';
 
 function ViewArticle({ articles }) {
+    
     const { articleId } = useParams();
     const [article, setArticle] = useState(null);
     const [isLoading, setIsLoading] = useState(true);

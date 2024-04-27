@@ -45,6 +45,10 @@ import MembershipManagement from './Pages/MembershipManagement';
 import LibrarianChat from './Pages/LibrarianChat';
 import ArticleManagement from './Pages/ArticleManagement';
 import TermsAndPolicies from './Pages/TermsAndPolicies';
+import AdminFineManagement from './Pages/AdminFineManagement';
+import AdminSettings from './Pages/AdminSettings';
+import AdminProfileManagement from './Pages/AdminProfileManagement';
+import AdminNotificationControl from './Pages/AdminNotificationControl';
 
 function App() {
 
@@ -95,7 +99,14 @@ function App() {
         <Route path='/admin-book-management' element={<BookManagement />} />
         <Route path='/membership-management' element={<MembershipManagement />} />
         <Route path='/librarian-article-management' element={<ArticleManagement articles={articles}/>} />
+
+        {/* TO DO */}
         <Route path='/admin-fine-management' element={<AdminFineManagement />} />
+        <Route path='/admin-settings' element={<AdminSettings />} />
+        <Route path='/admin-profile-management' element={<AdminProfileManagement />} />
+        <Route path='/admin-notification-control' element={<AdminNotificationControl />} />
+
+        
 
         <Route path='/test' element={<Test />} />
       </Routes>

@@ -1,9 +1,13 @@
 import BookView from "../Components/BookView";
-import imgSrc from "../resources/book-cover.jpg";
-import styles from "./style/MyBooks.module.css"; // Import the CSS module
-import UserNavBar from "../Components/UserNavBar"; // Import the UserNavBar component
+import styles from "./style/MyBooks.module.css";
+import UserNavBar from "../Components/UserNavBar";
+import books from '../book';
 
 function MyBooks() {
+
+    const selectedBook = books[0];
+    const borrowedDate = '2024-04-28';
+
     return (
         <>
             <UserNavBar />
@@ -12,12 +16,7 @@ function MyBooks() {
                 <div className={styles.content}>
                     <h1>My Books</h1>
                     <div className={styles.bookViewContainer}>
-                        <BookView
-                            imgSrc={imgSrc}
-                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
-                            borrowedDate="7 days ago"
-                        />
+                        <BookView book={selectedBook} borrowedDate={borrowedDate} />
                     </div>
                 </div>
 

@@ -55,25 +55,25 @@ function UserProfileLeftSideNavBar() {
       </div>
 
       <div className={styles.navItem}>
-        <Link to="/history" className={styles.navLink}>
+        <Link to="/lending-history" className={styles.navLink}>
           <ManageHistoryIcon />
           <span className={styles.navText}>lending History</span>
         </Link>
       </div>
 
       <div className={styles.navItem}>
-        <Link to="/currency" className={styles.navLink}>
+        <Link to="/fine-history" className={styles.navLink}>
           <CurrencyExchangeIcon />
           <span className={styles.navText}>Fine History</span>
         </Link>
       </div>
 
-      <div className={styles.navItem}>
+      {/* <div className={styles.navItem}>
         <Link to="/report" className={styles.navLink}>
           <ReportIcon />
           <span className={styles.navText}>Complain</span>
         </Link>
-      </div>
+      </div> */}
 
       <div className={styles.navItem}>
         <Link to="/logout" className={styles.navLink}>

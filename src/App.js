@@ -37,6 +37,8 @@ import MyBooks from './Pages/MyBooks';
 import EditProfile from './Pages/EditProfile';
 import SecurityPage from './Pages/SecurityPage';
 import Notifications from './Pages/Notifications';
+import LendingHistory from './Pages/LendingHistory';
+import FineHistory from './Pages/FineHistory';
 
 // Lathisana
 import AdminDashboardHome from './Pages/AdminDashboardHome';
@@ -66,6 +68,8 @@ function App() {
           element={<ViewArticle articles={articles} />}
         />
 
+
+
         {/*Shobikan */}
         <Route path="/login" element={<Login />} />
         <Route path='/details-fill' element={<DetailsFilling />} />
@@ -76,6 +80,8 @@ function App() {
         <Route path='/change-forgot-password' element={<ChangeForgotPassword />} />
         <Route path='/verifyMailForgotPassword' element={<VerifyForgotPassword />} />
 
+
+
         {/* Mihunan */}
         <Route path="/" element={<UserHome books={books} />} />
         <Route path='/complaint' element={<Complaint />} />
@@ -85,6 +91,8 @@ function App() {
         {/*Librarian Chat */}
         <Route path='/librarian-chat' element={<LibrarianChat />} />
 
+
+
         {/* Yasothan */}
         <Route path="/message" element={<UserMessages />} />
         <Route path="/fine" element={<FineManagement />} />
@@ -93,6 +101,11 @@ function App() {
         <Route path='/security' element={<SecurityPage />} />
         <Route path='/notifications' element={<Notifications />} />
         <Route path='/terms' element={<TermsAndPolicies />} />
+        {/* To do */}
+        <Route path='/lending-history' element={<LendingHistory />} />
+        <Route path='/fine-history' element={<FineHistory />} />
+
+
 
         {/* Lathisana */}
         <Route path="/admin" element={<AdminDashboardHome />} />
@@ -105,8 +118,6 @@ function App() {
         <Route path='/admin-settings' element={<AdminSettings />} />
         <Route path='/admin-profile-management' element={<AdminProfileManagement />} />
         <Route path='/admin-notification-control' element={<AdminNotificationControl />} />
-
-        
 
         <Route path='/test' element={<Test />} />
       </Routes>

@@ -101,8 +101,8 @@ function App() {
         <Route path='/security' element={<SecurityPage />} />
         <Route path='/notifications' element={<Notifications />} />
         <Route path='/terms' element={<TermsAndPolicies />} />
-        {/* To do */}
         <Route path='/lending-history' element={<LendingHistory />} />
+        {/* To do */}
         <Route path='/fine-history' element={<FineHistory />} />
 
 

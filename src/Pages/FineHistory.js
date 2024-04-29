@@ -8,7 +8,7 @@ function FineHistory() {
             <UserProfileLeftSideNavBar />
             <div className={styles.container}>
                 <div className={styles.contents}>
-                    <h1>Hi</h1>
+                    <h1>Fine History</h1>
 
                     <div className={styles.fineTable}>
                         <FineTable />

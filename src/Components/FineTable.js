@@ -3,32 +3,23 @@ import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon' },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei' },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime' },
-  { id: 4, lastName: 'Stark', firstName: 'Arya' },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys' },
+  { id: 1, bookName: 'Book A', borrowedDate: '2024-04-01', submittedDate: '2024-04-10', fineAmount: 5.00 },
+  { id: 2, bookName: 'Book B', borrowedDate: '2024-03-15', submittedDate: '2024-04-05', fineAmount: 3.50 },
+  { id: 3, bookName: 'Book C', borrowedDate: '2024-03-20', submittedDate: '2024-04-12', fineAmount: 7.00 },
+  { id: 4, bookName: 'Book D', borrowedDate: '2024-04-05', submittedDate: '2024-04-15', fineAmount: 2.00 },
 ];
 
-const getFullName = (value, row) => {
-  return `${row.firstName || ''} ${row.lastName || ''}`;
-};
-
 const columns = [
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    width: 160,
-    valueGetter: getFullName,
-  },
+  { field: 'bookName', headerName: 'Book Name', width: 200 },
+  { field: 'borrowedDate', headerName: 'Borrowed Date', width: 150 },
+  { field: 'submittedDate', headerName: 'Submitted Date', width: 150 },
+  { field: 'fineAmount', headerName: 'Fine Amount', type: 'number', width: 150 },
 ];
 
 export default function FineTable() {
   return (
     <Box sx={{ height: 400, width: '100%' }}>
-      <DataGrid rows={rows} columns={columns} />
+      <DataGrid rows={rows} columns={columns} pageSize={5} />
     </Box>
   );
 }

@@ -102,7 +102,6 @@ function App() {
         <Route path='/notifications' element={<Notifications />} />
         <Route path='/terms' element={<TermsAndPolicies />} />
         <Route path='/lending-history' element={<LendingHistory />} />
-        {/* To do */}
         <Route path='/fine-history' element={<FineHistory />} />
 
 

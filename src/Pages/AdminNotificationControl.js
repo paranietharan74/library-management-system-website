@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from './style/AdminNotificationControl.module.css';
 import LibrarianTopNavBar from '../Components/LibrarianTopNavBar';
 import { TextField, Button, List } from '@mui/material';
-import NotificationItem from '../Components/NotificationItem'; // Import NotificationItem component
+import NotificationItem from '../Components/NotificationItem';
+import Footer from '../Components/LibraryFooter';
 
 function AdminNotificationControl() {
     const [notifications, setNotifications] = useState([]);
@@ -28,7 +29,7 @@ function AdminNotificationControl() {
     };
 
     return (
-        <>
+        <div className={styles.AdminNotificationControl}>
             <div className={styles.container}>
                 <LibrarianTopNavBar />
 
@@ -86,7 +87,9 @@ function AdminNotificationControl() {
                     </div>
                 </div>
             </div>
-        </>
+
+            <Footer />
+        </div>
     );
 }
 

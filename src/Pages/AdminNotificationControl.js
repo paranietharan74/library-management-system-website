@@ -37,21 +37,25 @@ function AdminNotificationControl() {
 
                     {/* Notification Input Form */}
                     <div className={styles.notificationForm}>
-                        <TextField
-                            fullWidth
-                            label="Notification Heading"
-                            variant="outlined"
-                            value={newNotificationHeading}
-                            onChange={(e) => setNewNotificationHeading(e.target.value)}
-                        />
+                        <div className={styles.headingInput}>
+                            <TextField
+                                fullWidth
+                                label="Notification Heading"
+                                variant="outlined"
+                                value={newNotificationHeading}
+                                onChange={(e) => setNewNotificationHeading(e.target.value)}
+                            />
+                        </div>
 
-                        <TextField
-                            fullWidth
-                            label="Type your notification here"
-                            variant="outlined"
-                            value={newNotificationBody}
-                            onChange={(e) => setNewNotificationBody(e.target.value)}
-                        />
+                        <div className={styles.bodyInput}>
+                            <TextField
+                                fullWidth
+                                label="Type your notification here"
+                                variant="outlined"
+                                value={newNotificationBody}
+                                onChange={(e) => setNewNotificationBody(e.target.value)}
+                            />
+                        </div>
                         <Button
                             variant="contained"
                             color="primary"
@@ -65,15 +69,20 @@ function AdminNotificationControl() {
                     {/* Notification History List */}
                     <div className={styles.notificationList}>
                         <h2>Notification History</h2>
-                        <List>
-                            {notifications.map((notification) => (
-                                <NotificationItem
-                                    key={notification.id}
-                                    notification={notification}
-                                    onDelete={handleDeleteNotification}
-                                />
-                            ))}
-                        </List>
+
+                        <div className={styles.list}>
+                            <List>
+                                {notifications.map((notification) => (
+                                    <div className={styles.NotificationItem}>
+                                        <NotificationItem
+                                            key={notification.id}
+                                            notification={notification}
+                                            onDelete={handleDeleteNotification}
+                                        />
+                                    </div>
+                                ))}
+                            </List>
+                        </div>
                     </div>
                 </div>
             </div>

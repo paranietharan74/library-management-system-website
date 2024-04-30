@@ -11,6 +11,71 @@
 
 .contents h1 {
     font-family: var(--heading-font);
-    font-weight: 300;
+    font-weight: 700;
     font-style: normal;
+}
+
+.notificationForm {
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: radial-gradient(#4b4b50 0.5px, transparent 0.5px), radial-gradient(#4b4b50 0.5px, #ffffff 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+
+    border: 2px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 20px;
+
+    max-width: 70vw;
+    width: 65vw;
+    margin-left: 10vw;
+
+    text-align: center;
+}
+
+.headingInput,
+.bodyInput {
+    width: 30vw;
+    padding: 15px;
+    max-width: 35vw;
+    /* Align this two items to the center of the form */
+    margin: auto;
+    text-align: center;
+}
+
+.notificationList {
+    margin-top: 50px;
+}
+
+.notificationList {
+    font-family: var(--heading-font);
+    font-weight: 1000;
+    font-style: normal;
+}
+
+.list {
+    margin: 0vw 20vw 0vw 20vw;
+    margin-bottom: 30px;
+    max-height: 50vh;
+    overflow-y: scroll;
+    /* Styles for border */
+    border: 5px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 20px;
+    /* styles for background */
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: linear-gradient(135deg, #4b4b50 25%, transparent 25%), linear-gradient(225deg, #4b4b50 25%, transparent 25%), linear-gradient(45deg, #4b4b50 25%, transparent 25%), linear-gradient(315deg, #4b4b50 25%, #ffffff 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
+}
+
+.NotificationItem {
+    background-color: #f2f2f2;
+
+    margin-top: 20px;
+    border: 4px solid #666666;
+    border-radius: 10px;
+    padding: 20px;
 }

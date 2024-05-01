@@ -14,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #d9d9d9 80%, #2E52C2 20%);
+    background: url('../../resources/library-login-bg.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -82,11 +82,4 @@
     font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
     font-weight: 500;
-}
-
-.progress-bar {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
 }

@@ -5,12 +5,6 @@ import { useState } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 
 function DetailsFilling() {
-    // for vertical status bar
-    const [currentStep, setCurrentStep] = useState(1);
-
-    const handleNextStep = () => {
-        setCurrentStep(currentStep + 1);
-    };
 
     // for password checking
     const [password, setPassword] = useState('');
@@ -29,6 +23,7 @@ function DetailsFilling() {
         setIsValid(checkPassword(password, newConfirmPassword));
     };
 
+    // Password Validation
     const handleChange = (event) => {
         const newPassword = event.target.value;
         setPassword(newPassword);

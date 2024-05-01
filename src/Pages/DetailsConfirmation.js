@@ -1,5 +1,4 @@
-import styles from './style/DetailsConfirmation.module.css'; // Import the .module.css file
-import VerticalProgressBar from '../Components/VerticalProgressBar';
+import styles from './style/DetailsConfirmation.module.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -67,10 +66,6 @@ function DetailsConfirmation() {
 
                         <button type='submit' className={styles['confirm-details-next-button']}>Next</button>
                     </div>
-                </div>
-
-                <div className={styles['progress-bar']}>
-                    <VerticalProgressBar currentStep={currentStep} />
                 </div>
             </div>
         </div>

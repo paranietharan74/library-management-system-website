@@ -59,7 +59,7 @@ function App() {
           element={<ViewArticle articles={articles} />}
         />
 
-        {/*Shobikan */}~
+        {/*Shobikan */}
         <Route path="/login" element={<Login />} />
         <Route path='/details-fill' element={<DetailsFilling />} />
         <Route path='/details-confirmation' element={<DetailsConfirmation />} />

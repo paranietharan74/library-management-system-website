@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles/SingleSearchResult.module.css';
+import styles from './style/SingleSearchResult.module.css';
 
 const SingleSearchResult = ({ profileImage, name, bookName, fineAmount }) => {
   return (

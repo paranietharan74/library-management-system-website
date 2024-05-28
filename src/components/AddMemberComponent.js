@@ -1,6 +1,6 @@
 import React from 'react';
 import DisplayMemberVerificationDetails from './DisplayMemberVerificationDetails';
-import styles from './styles/AddMemberComponent.module.css';
+import styles from './style/AddMemberComponent.module.css';
 import { useState } from 'react';
 
 function AddMemberComponent() {

@@ -1,8 +1,13 @@
-.Container {
-    margin-left: calc(15vw + 65px);
-    padding: 10px;
+.librarianChat{
     background-color: #f2f2f2;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Container {
+    margin-left: 5vw;
+    padding: 10px;
+    /* height: 80vh; */
     max-height: 85vh;
     margin-top: 10px;
 }

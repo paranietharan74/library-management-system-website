@@ -1,20 +1,21 @@
-import * as React from 'react';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-const Search = styled('div')(({ theme }) => ({
+
+const Search = styled('div')(({ theme, width }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    // backgroundColor: alpha(theme.palette.common.white, 0.15),
     backgroundColor: '#f2f2f2',
     '&:hover': {
-        // backgroundColor: alpha(theme.palette.common.white, 0.25),
         backgroundColor: '#e6e6e6',
     },
-    marginLeft: 0,
-    width: '70%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: width || '90%',
     [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1),
         width: 'auto',
     },
     height: '40px',
@@ -46,17 +47,24 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-// search bar place holder through input
 export default function SearchAppBar(props) {
-    const { SearchBarPlaceholder } = props;
+    const { SearchBarPlaceholder, width, onSearchChange } = props;
+
+    const handleInputChange = (event) => {
+        if (onSearchChange) {
+            onSearchChange(event.target.value);
+        }
+    };
+
     return (
-        <Search>
+        <Search width={width}>
             <SearchIconWrapper>
                 <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
                 placeholder={SearchBarPlaceholder}
                 inputProps={{ 'aria-label': 'search' }}
+                onChange={handleInputChange}
             />
         </Search>
     );

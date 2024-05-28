@@ -1,6 +1,6 @@
 // AddBooksComponent.js
 import React, { useState } from 'react';
-import styles from './styles/AddBooksComponent.module.css';
+import styles from './style/AddBooksComponent.module.css';
 
 function AddBooksComponent({ onAdd }) {
     // code for image preview

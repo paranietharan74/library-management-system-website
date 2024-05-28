@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import LibrarianTopNavBar from '../Components/LibrarianTopNavBar';
-import AdminLeftNavBar from '../Components/AdminLeftNavBar';
 import ChatPanel from '../Components/ChatPanel';
 import ChatList from '../Components/ChatList';
 import styles from './style/LibrarianChatStyle.module.css';
@@ -28,7 +27,6 @@ function LibrarianChat() {
     return (
         <div className={styles.librarianChat}>
             <LibrarianTopNavBar />
-            <AdminLeftNavBar />
 
             <div className={styles.Container}>
                 <div className={styles.chatContainer}>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './styles/BookDetailsEdit.module.css';
+import styles from './style/BookDetailsEdit.module.css';
 import { Button, TextField } from '@mui/material';
 
 function BookDetailsEdit({ book, onBack }) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './styles/EditBookComponent.module.css';
+import styles from './style/EditBookComponent.module.css';
 import SearchBar from './SearchBarComponent';
 import SingleBookSearchResult from './SingleBookSearchResult';
 import BookDetailsEdit from './BookDetailsEdit';

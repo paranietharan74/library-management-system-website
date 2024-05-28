@@ -1,6 +1,6 @@
 // DeleteMemberComponent.js
 import React, { useState } from 'react';
-import styles from './styles/DeleteMemberComponent.module.css';
+import styles from './style/DeleteMemberComponent.module.css';
 
 function DeleteMemberComponent() {
     const [searchQuery, setSearchQuery] = useState('');

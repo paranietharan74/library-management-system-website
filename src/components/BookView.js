@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './style/BookView.module.css'; // Import the CSS module
+import styles from './style/BookView.module.css';
 
-function BookView({ imgSrc, description, borrowedDate }) {
+function BookView({ book , borrowedDate}) {
+    const { bookImage, description} = book;
     return (
         <div className={styles.bookView}>
             <div className={styles.bookImg}>
-                <img src={imgSrc} alt="Book Cover" />
+                <img src={bookImage} alt="Book Cover" />
             </div>
 
             <div className={styles.bookInfo}>

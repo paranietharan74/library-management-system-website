@@ -114,8 +114,8 @@ function App() {
         {/* TO DO */}
         <Route path='/admin-settings' element={<AdminSettings />} />
         <Route path='/admin-profile-management' element={<AdminProfileManagement />} />
-        <Route path='/admin-notification-control' element={<AdminNotificationControl />} />
 
+        {/* Sample code for test */}
         <Route path='/test' element={<Test />} />
       </Routes>
     </Router>

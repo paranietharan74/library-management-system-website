@@ -1,17 +1,9 @@
 import CheckYourEmail from '../Components/CheckYourEmail';
 import styles from './style/VerifyEmail.module.css';
 import { Link } from 'react-router-dom';
-import VerticalProgressBar from '../Components/VerticalProgressBar';
-import { useState } from 'react';
 import OtpInput from '../Components/OtpInput';
 
 function VerifyEmail() {
-    // for vertical status bar
-    const [currentStep, setCurrentStep] = useState(3);
-
-    const handleNextStep = () => {
-        setCurrentStep(currentStep + 1);
-    };
 
     const SubmitCode = () => {
         console.log('Code submitted');
@@ -47,10 +39,6 @@ function VerifyEmail() {
                             <button type='button' onClick={SubmitCode}>Verify</button>
                         </div>
                     </form>
-
-                    <div className={styles['progress-bar']}>
-                        <VerticalProgressBar currentStep={currentStep} />
-                    </div>
 
                 </div>
             </div>

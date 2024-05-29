@@ -1,17 +1,10 @@
 import { Link } from 'react-router-dom';
 import styles from './style/DetailsFillingStyle.module.css';
-import VerticalProgressBar from '../Components/VerticalProgressBar';
 import { useState } from 'react';
 
 import 'font-awesome/css/font-awesome.min.css';
 
 function DetailsFilling() {
-    // for vertical status bar
-    const [currentStep, setCurrentStep] = useState(1);
-
-    const handleNextStep = () => {
-        setCurrentStep(currentStep + 1);
-    };
 
     // for password checking
     const [password, setPassword] = useState('');
@@ -30,14 +23,15 @@ function DetailsFilling() {
         setIsValid(checkPassword(password, newConfirmPassword));
     };
 
+    // Password Validation
     const handleChange = (event) => {
         const newPassword = event.target.value;
         setPassword(newPassword);
-    
+
         setHasMinLength(checkMinLength(newPassword));
         setHasNumber(checkNumber(newPassword));
         setHasSpecialChar(checkSpecialChar(newPassword));
-        
+
         setIsValid(checkPassword(newPassword));
     };
 
@@ -77,6 +71,12 @@ function DetailsFilling() {
                         <input
                             type='text'
                             placeholder='Last Name'
+                            required
+                        />
+
+                        <input
+                            type='text'
+                            placeholder='Index Number'
                             required
                         />
 
@@ -125,10 +125,6 @@ function DetailsFilling() {
                     <div className={styles.terms}>
                         <p>By creating an account you agree to our <Link to='/terms'>Terms & Privacy</Link></p>
                     </div>
-                </div>
-
-                <div className={styles['progress-bar']}>
-                    <VerticalProgressBar currentStep={currentStep} />
                 </div>
             </div>
         </div>

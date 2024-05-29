@@ -1,5 +1,5 @@
 import styles from './style/loginStyle.module.css'; // Import CSS module file
-import imgSrc from '../resources/login-background-img.jpg';
+import imgSrc from '../resources/library-login-bg.jpg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,15 +15,19 @@ function Login() {
 
     return (
         <div className={styles['login-container']}>
+            {/* Join Now text */}
             <div className={styles['join-now']}>
                 <p>Not a member yet? <Link to='/details-fill'>Join Now</Link></p>
             </div>
 
+            
             <div className={styles['container']}>
                 <div className={styles['login-form']}>
+                    {/* Login Form */}
                     <form className={styles['form']}>
-
+                        {/* Input Container */}
                         <div className={styles['input-container']}>
+                            {/*Email Input Container */}
                             <div className={styles['input-wrapper']}>
                                 <input
                                     type="text"
@@ -33,6 +37,7 @@ function Login() {
                                 />
                             </div>
 
+                            {/*Password Input Container */}
                             <div className={styles['input-wrapper']}>
                                 <input
                                     type={showPassword ? 'text' : 'password'}
@@ -43,13 +48,18 @@ function Login() {
                                     style={{ fontFamily: 'Arial, FontAwesome' }}
                                 />
 
+                                {/* Toggle function */}
                                 <button type="button" onClick={togglePasswordVisibility} className={styles['eye-icon-button']}>
                                     <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
                                 </button>
                             </div>
                         </div>
+
+                        {/* Submit button */}
                         <button type='submit' className={styles['login-form-submit-button']}>Proceed to my Account</button>
                     </form>
+
+                    {/* Forgot Password */}
                     <div className={styles['forgot-password']}>
                         <Link to='/forgot-password'>Having issues with your password</Link>
                     </div>

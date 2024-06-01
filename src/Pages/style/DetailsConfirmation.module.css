@@ -68,7 +68,7 @@
     font-family: var(--font-1);
 }
 
-/*
+/* Contents */
 .confirmation-details p {
     font-size: 16px;
     color: #333;
@@ -87,7 +87,7 @@
 .class-details {
     color: #007bff;
 }
-*/
+/*************************************************************/
 
 .confirm-details-next-button {
     margin: 20px 15vw;

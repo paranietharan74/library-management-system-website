@@ -71,10 +71,6 @@ function ChangeForgotPassword() {
                     </form>
                 </div>
             </div>
-
-            <div className={styles['img-container']}>
-                <img src={imgSrc} alt='background' className={styles['background-img']} />
-            </div>
         </div>
     );
 }

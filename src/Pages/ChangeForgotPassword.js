@@ -1,4 +1,3 @@
-import imgSrc from '../resources/login-background-img.jpg';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
@@ -70,10 +69,6 @@ function ChangeForgotPassword() {
                         <button type='submit' className={styles['login-form-submit-button']}>Change Password {<i className="fa fa-chevron-circle-right" aria-hidden="true" style={{ marginLeft: '10px', fontSize: '20px' }}></i>}</button>
                     </form>
                 </div>
-            </div>
-
-            <div className={styles['img-container']}>
-                <img src={imgSrc} alt='background' className={styles['background-img']} />
             </div>
         </div>
     );

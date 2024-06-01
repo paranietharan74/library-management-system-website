@@ -51,7 +51,7 @@
 
 .confirmation-form-container {
     width: 40vw;
-    height: 50vh;
+    height: 55vh;
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
@@ -92,7 +92,7 @@
 /*************************************************************/
 
 .confirm-details-next-button {
-    margin: 20px 15vw;
+    margin: 5px 15vw;
     background-color: #007bff;
     color: white;
     padding: 10px 20px;

@@ -6,6 +6,9 @@ import SearchBar from '../Components/SearchBarComponent';
 import SingleSearchResult from "../Components/SingleSearchResult";
 import exampleImage from '../resources/sample-picture.jpg';
 
+
+
+
 function AdminDashboardHome() {
   return (
     <div>
